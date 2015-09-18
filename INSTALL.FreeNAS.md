@@ -77,7 +77,8 @@ post_max_size = 20M
 date.timezone = Europe/Vienna
 ```
   
-#### 8. Create a backup of your php-fpm settings and replace the default config with the following content.
+#### 8. PHP - FPM Settings
+Create a backup of your php-fpm settings and replace the default config with the following content.
 ```
 $> cp /usr/local/etc/php-fpm.conf /usr/local/etc/php-fpm.conf.bak
 $> ee /usr/local/etc/php-fpm.conf
@@ -117,7 +118,8 @@ env[TEMP] = /tmp
 $> service php-fpm start
 ```
   
-#### 10. Adjust the nginx.conf file to your needs. My configuration is listed below:
+#### 10. Adjust the nginx.conf file to your needs. 
+My configuration is listed below:
 __Note__ that i configured another nginx that handles incoming connections from the internet. So I want to the admin and config file to be accessible from my local network when accessing the server by its internal IP but don't want the files to be accessible from outside. So make sure that you block these files in your configuration!
 
 ```
@@ -188,26 +190,31 @@ __Note__ that i configured another nginx that handles incoming connections from 
    }
 ```
   
-#### 11. clone Runalyze archive or donwload a release zip file to your box and extract it to '/usr/local/www/runalyze'
+#### 11. Clone or Download
+Clone Runalyze archive or donwload a release zip file to your box and extract it to '/usr/local/www/runalyze'
 ```
 $> cd /usr/local/www && fetch https://github.com/Runalyze/Runalyze/releases/download/v2.1.0/runalyze-v2.1.0.zip && unzip runalyze-v2.1.0.zip
 ```
   
-#### 12. Set the access rights so that your www user is allowed to manipulate the created dir.
+#### 12. Access rights
+Set the access rights so that your www user is allowed to manipulate the created dir.
 ```
 $> chown -R www:www /usr/local/www/runalyze
 ```
   
-#### 13. Because FreeBSD uses other path for placing binaries you have to change the perl exec path in: __runalyze/inc/system/shell/class.PerlCommand.php__
+#### 13. Change Perl Path
+Because FreeBSD uses other path for placing binaries you have to change the perl exec path in: __runalyze/inc/system/shell/class.PerlCommand.php__
 ```
 FROM: private static $PERL_PATH = '/usr/bin/perl';
   TO: private static $PERL_PATH = '/usr/local/bin/perl';
 ```
 
-#### 14. Now it is time to install runalyze itself by opening http://<ip-of-you-box>/install.php in your browser and following the installation routine. If it tells you that perl script wont work don't mind! Thats caused by a bug in FreeNAS jails (see: https://bugs.freenas.org/issues/4810).
+#### 14. Install RUNALYZE
+Now it is time to install runalyze itself by opening http://<ip-of-you-box>/install.php in your browser and following the installation routine. If it tells you that perl script wont work don't mind! Thats caused by a bug in FreeNAS jails (see: https://bugs.freenas.org/issues/4810).
 __BUT:__ If you want to be able to import *.fit Files you will have to apply a little hack.
 
-#### 15. Overcome locale errors/warnings of perl:
+#### 15. Make the FIT file importer work
+Overcome locale errors/warnings of perl:
 Open the FIT file importer class:
 ```
 $> ee runalyze/inc/import/filetypes/class.ImporterFiletypeFIT.php
