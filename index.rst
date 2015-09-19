@@ -8,9 +8,13 @@ Welcome to RUNALYZE administration documentation's documentation!
 
 Contents:
 
+.. _install:
+
 .. toctree::
    :maxdepth: 2
+   :caption: Installation
 
+   install
 
 
 Indices and tables
@@ -19,4 +23,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

@@ -1,5 +1,6 @@
 .. _install:
 
+
 Installation instructions
 =========================
 
@@ -12,9 +13,10 @@ Install on Windows
 
 Install Runalyze inside a FreeNAS jail
 --------------------------------------
-#### 1. Create new FreeNAS jail
-   * VIMAGE: checked
-   * Everything else: Default
+1. Create new FreeNAS jail
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * VIMAGE: checked
+ * Everything else: Default
 
 2. Open a shell, connect to your freenas box and open a shell in the created jail.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -156,8 +158,10 @@ Create a backup of your php-fpm settings and replace the default config with the
 My configuration is listed below:
 
 .. note::
-          that i configured another nginx that handles incoming connections from the internet.
+          That i configured another nginx that handles incoming connections from the internet.
+
           So I want to the admin and config file to be accessible from my local network when accessing the server by its internal IP but don't want the files to be accessible from outside.
+          
           So make sure that you block these files in your configuration!
 
 ::
