@@ -8,13 +8,24 @@ Welcome to RUNALYZE administration documentation's documentation!
 
 Contents:
 
+.. toctree::
+   :maxdepth: 2
+   :caption: General
+
+   faq
+   support
+   
 .. _install:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Installation
+   :caption: Installation & Update
 
    install
+
+
+
+
 
 
 Indices and tables

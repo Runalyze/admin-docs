@@ -4,6 +4,13 @@
 Installation instructions
 =========================
 
+The following instructions are only for the official RUNALYZE Release packages.
+
+For the installation directly via git you have to do some additional task.
+
+We recommend to use the official releases
+
+
 Install on Ubuntu/Debian distributions
 --------------------------------------
 
@@ -161,7 +168,7 @@ My configuration is listed below:
           That i configured another nginx that handles incoming connections from the internet.
 
           So I want to the admin and config file to be accessible from my local network when accessing the server by its internal IP but don't want the files to be accessible from outside.
-          
+
           So make sure that you block these files in your configuration!
 
 ::
