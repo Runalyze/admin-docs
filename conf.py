@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# RUNALYZE administration documentation documentation build configuration file, created by
+# RUNALYZE administration documentation build configuration file, created by
 # sphinx-quickstart on Thu Sep 17 17:31:00 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -59,7 +59,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'RUNALYZE administration documentation'
+project = u'RUNALYZE administration'
 copyright = u'2015, Hannes Christiansen, Michael Pohl'
 author = u'Hannes Christiansen, Michael Pohl'
 
