@@ -32,7 +32,7 @@ To install all current dependencies, open a terminal, switch to your RUNALYZE di
     composer install
     bower install
     npm install
-    grunt
+    grunt dev
 
 Installation of RUNALYZE
 ------------------------
