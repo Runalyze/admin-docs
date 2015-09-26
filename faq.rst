@@ -53,6 +53,21 @@ The following error may appear after updating from v2.1 to v2.2 when opening the
 You probably copied the new version into your existing runalyze-directory without removing the old files.
 You can just delete the folder ``/plugin/RunalyzePluginPanel_Schuhe/``.
 
+MySQL error: Cannot add or update a child row
+---------------------------------------------
+The following error may appear while trying to update your database::
+
+    #1452 - Cannot add or update a child row: a foreign key constraint fails (`runalyze`.`#sql-4a8_39`, CONSTRAINT ...
+
+**Answer:**
+From RUNALYZE v2.2 on we are using foreign keys to keep the database consistent.
+It seems that your table contains at least one row that should be deleted, for example because the respective activity does not exist anymore.
+Please read the exact error message (which constraint fails?), find the faulty row and delete it.
+
+**Example:**
+The constraint ``(activityid) REFERENCES runalyze_training (id)`` fails while trying to alter table ``runalyze_trackdata``.
+You can find the faulty row with ``SELECT runalyze_trackdata.*, runalyze_training.id FROM runalyze_trackdata LEFT JOIN runalyze_training ON runalyze_trackdata.activityid = runalyze_training.id WHERE ISNULL(id)``. Remember the shown ``activityid``, delete this row from ``runalyze_trackdata`` by hand and try the respective line from the database update again.
+
 Common problems
 ***************
 
