@@ -28,6 +28,7 @@ Contents:
    :caption: Development
 
    checkout
+   contribute
 
 
 
