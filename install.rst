@@ -4,22 +4,31 @@
 Installation instructions
 =========================
 
-The following instructions are only for the official RUNALYZE Release packages.
+The following instructions are valid only for official `RUNALYZE releases <https://github.com/Runalyze/Runalyze/releases>`_.
+If you want to use our current development version, have a look at our :doc:`checkout instructions <checkout>`.
 
-For the installation directly via git you have to do some additional task.
-
-We recommend to use the official releases
-
-
-Install on Ubuntu/Debian distributions
---------------------------------------
+In general, RUNALYZE requires at least PHP 5.4+ and MySQL 5.0.0+.
+To install an official release, download the respective \*.zip or \*.tar.gz file, unpack the archive and open ``install.php`` from that directory with your browser.
 
 
-Install on Windows
-------------------
+Ubuntu/Debian distributions
+---------------------------
 
-Install Runalyze inside a FreeNAS jail
---------------------------------------
+...
+
+Windows
+-------
+
+...
+
+MacOS
+-----
+
+...
+
+FreeNAS jail
+------------
+
 1. Create new FreeNAS jail
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
  * VIMAGE: checked
@@ -40,8 +49,8 @@ Install Runalyze inside a FreeNAS jail
     $> pkg install nginx php56 php56-extensions mysql56-server php56-mysql php56-mbstring php56-zlib php56-openssl php56-gettext php56-pdo_mysql node npm
 
 
-4. Add the following lines to your __/etc/rc.conf__ file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4. Add the following lines to your ``__/etc/rc.conf__`` file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
     nginx_enable="YES"
@@ -78,10 +87,9 @@ with the following content:::
 
    $> mysql_secure_installation
 
---> set a root password, remove anonymous user and test db before reloading privileges table (defaults).
+* set a root password, remove anonymous user and test db before reloading privileges table (defaults).
 
-* Now we will create a new sql user called 'runalyze' and a database (also 'runalyze') where the data is stored:
-::
+* Now we will create a new sql user called 'runalyze' and a database (also 'runalyze') where the data is stored::
 
         $> mysql -u root -p
         $mysql> CREATE DATABASE runalyze;
@@ -268,8 +276,8 @@ Because FreeBSD uses other path for placing binaries you have to change the perl
 
 14. Install RUNALYZE
 ~~~~~~~~~~~~~~~~~~~~~~
-Now it is time to install runalyze itself by opening http://<ip-of-you-box>/install.php in your browser and following the installation routine. If it tells you that perl script wont work don't mind! Thats caused by a bug in FreeNAS jails (see: https://bugs.freenas.org/issues/4810).
-__BUT:__ If you want to be able to import *.fit Files you will have to apply a little hack.
+Now it is time to install runalyze itself by opening ``http://<ip-of-you-box>/install.php`` in your browser and following the installation routine. If it tells you that perl script wont work don't mind! Thats caused by a bug in FreeNAS jails (see: https://bugs.freenas.org/issues/4810).
+**BUT:** If you want to be able to import \*.fit Files you will have to apply a little hack.
 
 15. Make the FIT file importer work
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -278,20 +286,21 @@ Open the FIT file importer class: ::
 
     $> ee runalyze/inc/import/filetypes/class.ImporterFiletypeFIT.php
 
-Replace the private function readFirstLine() with the following code snippet. ::
+Replace the private function readFirstLine() with the following code snippet.
 
-      php
+.. code-block:: php
+
       protected function readFirstLine() {
           // XXX: Workaround for Perl locale Warnings
           //      Lines like the following are ignored silently:
-      	// --- Console log of perl running with undefined locale ---
+          // --- Console log of perl running with undefined locale ---
           // perl: warning: Setting locale failed.
           // perl: warning: Please check that your locale settings:
           //         LC_ALL = "en_US",
           //         LANG = "en_US"
           //     are supported and installed on your system.
           // perl: warning: Falling back to the standard locale ("C").
-      	// --- end ---
+          // --- end ---
 
           do {
               $FirstLine = stream_get_line($this->Handle, 4096, PHP_EOL);

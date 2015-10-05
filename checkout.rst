@@ -23,7 +23,11 @@ Open a terminal, switch to the directory where your copy of RUNALYZE should be l
 
     git clone https://github.com/Runalyze/Runalyze.git
 
-This creates a new directory ``Runalyze`` with all contents from our repository.
+This creates a new directory ``runalyze`` with all contents from our repository.
+If you want to contribute to RUNALYZE you should fork our repository.
+In that case you'll have to clone your own fork of RUNALYZE via::
+
+    git clone https://github.com/<your-github-name>/Runalyze.git
 
 Installation of dependencies
 ----------------------------
