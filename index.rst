@@ -22,6 +22,7 @@ Contents:
    :caption: Installation & Update
 
    install
+   update
 
 .. toctree::
    :maxdepth: 2
