@@ -37,7 +37,7 @@ You may have problems with the `SET GLOBAL` statements. (As described in the fil
 
 3. Open `update.php` in your browser and update from version 2.1 to 2.2.
 
-4. For this update of RUNALYZE you have to run another refactor script. Set your database connection in the file `refactor-equipment.php`.
+4. For this update of RUNALYZE you have to run another refactor script. Set your database connection in the file `refactor-equipment.php`. Also edit the prefix if its not 'runalyze_'.
 
 5. If you don't want or can't use InnoDB as your storage engine set::
 
