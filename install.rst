@@ -10,6 +10,7 @@ If you want to use our current development version, have a look at our :doc:`che
 In general, RUNALYZE requires at least PHP 5.4+ and MySQL 5.0.0+.
 To install an official release, download the respective \*.zip or \*.tar.gz file, unpack the archive and open ``install.php`` from that directory with your browser.
 
+You need an API-Key for the Garmin Communicator Plugin. You can get it at `garmin.com <http://www.garmindeveloper.com/web-device/garmin-communicator-plugin/get-your-site-key/>`_.
 
 Ubuntu/Debian distributions
 ---------------------------
