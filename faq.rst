@@ -8,7 +8,7 @@ Error messages
 
  „out of memory“ or „Maximum execution“
  --------------------------------------
-
+Depending on the server settings RUNALYZE may have problems with very large files. Especially logbook files can be big or if the Forerunner is set to "Record a data point every second" these problems may occur. The frequency of recording can be changed in the settings of the Forerunner.
 
 
 
