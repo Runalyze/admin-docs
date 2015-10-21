@@ -34,6 +34,11 @@ Installation of dependencies
 To install all current dependencies, open a terminal, switch to your RUNALYZE directory and type the following::
 
     composer install
+    php build/build.php translations
+
+Some branches and probably v2.3+ will require npm, bower and grunt. In that case you need to run the following commands::
+
+    composer install
     bower install
     npm install
     grunt dev
