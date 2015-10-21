@@ -15,7 +15,15 @@ You need an API-Key for the Garmin Communicator Plugin. You can get it at `garmi
 Ubuntu/Debian distributions
 ---------------------------
 
-...
+Packages: php-gettext
+
+You may need to install the corresponding locales to get the translations running:
+Have a look in `less /usr/share/i18n/SUPPORTED` whether the locale is already installed.
+If not you have to install the locales on the system(the following example is for the german language)::
+
+    sudo locale-gen de_DE.UTF-8
+    sudo service apache2 restart
+    
 
 Windows
 -------
