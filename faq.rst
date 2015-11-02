@@ -6,6 +6,12 @@ Frequently Asked Questions
 Error messages
 **************
 
+Fatal error: Maximum execution time of 30 seconds exceeded in 
+--------------------------------------------------------------
+Set the max_execution_time in your ``php.ini`` file higher than 30 seconds or add ``ini_set('max_execution_time', 300);`` to your index.php or update.php (where it happens).
+
+If you trying to update RUNALYZE, try to run the correlated update file (you will find the *.sql file in ``inc/install``) manually. 
+
  „out of memory“ or „Maximum execution“
  --------------------------------------
 Depending on the server settings RUNALYZE may have problems with very large files. Especially logbook files can be big or if the Forerunner is set to "Record a data point every second" these problems may occur. The frequency of recording can be changed in the settings of the Forerunner.
