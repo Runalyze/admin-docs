@@ -20,7 +20,7 @@ Upgrade single-user installation
 
 3. Purge your ``runalyze/`` directory except for ``config.php`` and extract the downloaded archive of v2.2.
 
-4. Import ``inc/install/switch-accountid-to-1.sql`` to your database.
+4. Attention! Instead of importing ``inc/install/switch-accountid-to-1.sql`` to your database use `this one <https://raw.githubusercontent.com/Runalyze/Runalyze/support/2.2.x/inc/install/switch-accountid-to-1.sql>`_.
 
 5. Continue with step 2 of the "Upgrade multi-user installation"
 
