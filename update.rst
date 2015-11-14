@@ -7,6 +7,8 @@ Update instructions
 Upgrade from 2.1 to 2.2
 ***********************
 
+.. note:: Please directly update from 2.1 to 2.2.1 to avoid any known problems with upgrading from single-user installations.
+
 From v2.2+ RUNALYZE does not support single-user installations without account anymore. You can skip this section if your installation does use an account.
 
 Upgrade single-user installation
