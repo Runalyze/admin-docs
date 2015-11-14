@@ -98,3 +98,7 @@ My RUNALYZE version is only in english
 *On Linux (Ubuntu/Debian):*
 
 Maybe you are missing the gettext PHP package. Please install the package ``php-gettext``. Don't forget to restart your webserver!
+
+Cannot activate my account (no activation mail)
+------------------------------------------------
+Usually the account should be activated automatically when you host your RUNALYZE installaton locally. If this fails you have to remove the ``activation_hash`` from the ``_account`` table in the database. 
