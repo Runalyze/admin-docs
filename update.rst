@@ -48,3 +48,5 @@ Upgrade multi-user installation
 
 Common problems
 ----------------
+** Error in query (1193): Unknown system variable 'innodb_file_format'" ** during importing innodb.sql
+Comment or remove the "SET GLOBAL" lines and try it again
