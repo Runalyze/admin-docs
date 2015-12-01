@@ -4,6 +4,20 @@
 Update instructions
 ===================
 
+Upgrade from 2.2 to 2.3
+***********************
+1. Purge your runalyze/ directory except for config.php and extract the downloaded archive of v2.3.
+
+2. Open ``runalyze/update.php`` in your browser and update from v2.2 to v2.3.
+
+3. Insert your database connection in ``refactor-geohash.php`` and adjust the other settings, e.g. the prefix if it's not ``runalyze_``.
+
+4. Run ``refactor-geohash.php`` via command line or browser. (We recommend to run this script via command line, because of long execution times)
+
+5. Remember to remove your credentials from ``refactor-geohash.php`` afterwards.
+
+6. We haved moved the Perl path setting to your config.php (or via admin.php). You may have to changed this path
+
 Upgrade from 2.1 to 2.2
 ***********************
 
@@ -44,7 +58,7 @@ Upgrade multi-user installation
 
 6. Run ``refactor-equipment.php`` via command line or browser.
 
-7. Remember to remove your credentials from ``refactor-equipemtn.php`` afterwards.
+7. Remember to remove your credentials from ``refactor-equipment.php`` afterwards.
 
 Common problems
 ----------------
