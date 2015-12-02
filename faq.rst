@@ -10,11 +10,12 @@ Fatal error: Maximum execution time of 30 seconds exceeded in
 --------------------------------------------------------------
 Set the max_execution_time in your ``php.ini`` file higher than 30 seconds or add ``ini_set('max_execution_time', 300);`` to your index.php or update.php (where it happens).
 
-If you trying to update RUNALYZE, try to run the correlated update file (you will find the *.sql file in ``inc/install``) manually. 
+If you are trying to update RUNALYZE, try to run the respective update file (you will find the sql-file in ``inc/install``) manually. 
 
- „out of memory“ or „Maximum execution“
- --------------------------------------
-Depending on the server settings RUNALYZE may have problems with very large files. Especially logbook files can be big or if the Forerunner is set to "Record a data point every second" these problems may occur. The frequency of recording can be changed in the settings of the Forerunner.
+„out of memory“ or „Maximum execution“
+--------------------------------------
+Depending on your server settings RUNALYZE may have problems with large files.
+Especially logbook files can be large or if the Forerunner is set to "Record a data point every second" these problems may occur. The frequency of recording can be changed in the settings of the Forerunner.
 
 
 
@@ -72,7 +73,11 @@ Please read the exact error message (which constraint fails?), find the faulty r
 
 **Example:**
 The constraint ``(activityid) REFERENCES runalyze_training (id)`` fails while trying to alter table ``runalyze_trackdata``.
-You can find the faulty row with ``SELECT runalyze_trackdata.*, runalyze_training.id FROM runalyze_trackdata LEFT JOIN runalyze_training ON runalyze_trackdata.activityid = runalyze_training.id WHERE ISNULL(id)``. Remember the shown ``activityid``, delete this row from ``runalyze_trackdata`` by hand and try the respective line from the database update again.
+You can find the faulty row with::
+
+    SELECT runalyze_trackdata.*, runalyze_training.id FROM runalyze_trackdata LEFT JOIN runalyze_training ON runalyze_trackdata.activityid = runalyze_training.id WHERE ISNULL(id)
+    
+Remember the shown ``activityid``, delete this row from ``runalyze_trackdata`` by hand and try the respective line from the database update again.
 
 Common problems
 ***************

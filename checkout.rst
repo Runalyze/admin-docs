@@ -10,6 +10,7 @@ GitHub offers a good tutorial `How to set up Git <https://help.github.com/articl
 Required tools
 --------------
 Whereas our official release contains all required dependencies, developers and users of our dev version need to install them themselves.
+npm, bower and grunt are required in some branches and for some future release.
 
 * `composer <https://getcomposer.org/doc/00-intro.md#system-requirements>`_
 * `npm <https://nodejs.org/download/>`_
@@ -25,7 +26,7 @@ Open a terminal, switch to the directory where your copy of RUNALYZE should be l
 
 This creates a new directory ``runalyze`` with all contents from our repository.
 If you want to contribute to RUNALYZE you should fork our repository.
-In that case you'll have to clone your own fork of RUNALYZE via::
+In that case you'll have to clone RUNALYZE via::
 
     git clone https://github.com/<your-github-name>/Runalyze.git
 
@@ -33,12 +34,12 @@ Installation of dependencies
 ----------------------------
 To install all current dependencies, open a terminal, switch to your RUNALYZE directory and type the following::
 
-    composer install
+    composer install --prefer-dist
     php build/build.php translations
 
-Some branches and probably v2.3+ will require npm, bower and grunt. In that case you need to run the following commands::
+Some branches and some future version will require npm, bower and grunt. In that case you need to run the following commands::
 
-    composer install
+    composer install --prefer-dist
     bower install
     npm install
     grunt dev
