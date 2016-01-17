@@ -4,6 +4,23 @@
 Update instructions
 ===================
 
+Upgrade from 2.3 to 2.4
+***********************
+1. Purge your runalyze/ directory except for ``config.php`` and extract the downloaded archive of v2.4.
+
+2. Move ``config.php`` to ``data/config.php``
+
+3. Add ``$port = 3306`` to ``data/config.php`` (3306 is the default mysql-port)
+
+4. Open ``runalyze/update.php`` in your browser and update from v2.3 to v2.4.
+
+5. After updating to version 2.4 you should run ``refactor-night.php`` (no database connection has to be set)
+
+6. You should run ``build/global.routefix.php`` (Set the database connection in the file) (You may have to adjust the .htaccess file to access this script via browser)
+
+7. Maybe you have to adjust the permissions for ``data/*``
+
+.. note:: If have local srtm files you should move them from ``inc/data/gps/srtm`` to ``data/srtm``
 Upgrade from 2.2 to 2.3
 ***********************
 1. Purge your runalyze/ directory except for config.php and extract the downloaded archive of v2.3.
