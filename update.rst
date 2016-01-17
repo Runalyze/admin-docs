@@ -16,7 +16,7 @@ Upgrade from 2.3 to 2.4
 
 5. After updating to version 2.4 you should run ``refactor-night.php`` (no database connection has to be set)
 
-6. You should run ``build/global.routefix.php`` (Set the database connection in the file) (You may have to adjust the .htaccess file to access this script via browser)
+6. You should run ``build/global.routefix.php`` (Set the database connection in the file) (To access this script via browser just rename the ``.htaccess```file in the ``build/`` directory. Don't forget to rename the file afterwards)
 
 7. Maybe you have to adjust the permissions for ``data/*``
 
