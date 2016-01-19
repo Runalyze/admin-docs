@@ -10,7 +10,7 @@ Upgrade from 2.3 to 2.4
 
 2. Move ``config.php`` to ``data/config.php``
 
-3. Add ``$port = 3306`` to ``data/config.php`` (3306 is the default mysql-port)
+3. Add ``$port = 3306;`` to ``data/config.php`` (3306 is the default mysql-port)
 
 4. Open ``runalyze/update.php`` in your browser and update from v2.3 to v2.4.
 
