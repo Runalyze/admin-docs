@@ -14,9 +14,9 @@ Upgrade from 2.3 to 2.4
 
 4. Open ``runalyze/update.php`` in your browser and update from v2.3 to v2.4.
 
-5. After updating to version 2.4 you should run ``refactor-night.php`` (no database connection has to be set)
+5. You should run ``build/global.routefix.php`` (Set the database connection in the file) (To access this script via browser just rename the ``.htaccess`` file in the ``build/`` directory. Don't forget to rename the file afterwards)
 
-6. You should run ``build/global.routefix.php`` (Set the database connection in the file) (To access this script via browser just rename the ``.htaccess`` file in the ``build/`` directory. Don't forget to rename the file afterwards)
+6. You should run now ``refactor-night.php`` (no database connection has to be set)
 
 7. Maybe you have to adjust the permissions for ``data/*``
 
