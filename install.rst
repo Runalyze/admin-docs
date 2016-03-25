@@ -280,11 +280,7 @@ Set the access rights so that your www user is allowed to manipulate the created
 ~~~~~~~~~~~~~~~~~~~~~~
 Change the perl exec path in your configuration. You can change it via admin.php or directly edit ``data/config.php``. 
 
-Because FreeBSD uses other path for placing binaries you have to change the perl exec path in: ``runalyze/inc/system/shell/class.PerlCommand.php``
-::
-
-    FROM: private static $PERL_PATH = '/usr/bin/perl';
-      TO: private static $PERL_PATH = '/usr/local/bin/perl';
+Change the path from ``/usr/bin/perl`` to ``/usr/local/bin/perl``
 
 
 14. Install RUNALYZE
