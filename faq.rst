@@ -106,4 +106,6 @@ Maybe you are missing the gettext PHP package. Please install the package ``php-
 
 Cannot activate my account (no activation mail)
 ------------------------------------------------
-Usually the account should be activated automatically when you host your RUNALYZE installaton locally. If this fails you have to remove the ``activation_hash`` from the ``_account`` table in the database. 
+Usually the account should be activated automatically when you host your RUNALYZE installaton locally. If this fails you have to remove the hash from the ``activation_hash`` colum of the user of the ``_account`` table in the database. 
+
+
