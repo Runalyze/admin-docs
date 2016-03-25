@@ -12,10 +12,12 @@ To install an official release, download the respective \*.zip or \*.tar.gz file
 
 You need an API-Key for the Garmin Communicator Plugin. You can get it at `garmin.com <http://www.garmindeveloper.com/web-device/garmin-communicator-plugin/get-your-site-key/>`_.
 
+You need an API-Key for the OpenWeatherMap weather data. You can get it at `openweathermap.org <http://openweathermap.org/appid>`_. The standard free API key can only get current weather information.
+
 Ubuntu/Debian distributions
 ---------------------------
 
-Packages: php-gettext
+Packages: php-gettext libxml2 gettext 
 
 You may need to install the corresponding locales to get the translations running:
 Have a look in ``less /usr/share/i18n/SUPPORTED`` whether the locale is already installed.
@@ -276,6 +278,8 @@ Set the access rights so that your www user is allowed to manipulate the created
 
 13. Change Perl Path
 ~~~~~~~~~~~~~~~~~~~~~~
+Change the perl exec path in your configuration. You can change it via admin.php or directly edit ``data/config.php``. 
+
 Because FreeBSD uses other path for placing binaries you have to change the perl exec path in: ``runalyze/inc/system/shell/class.PerlCommand.php``
 ::
 
