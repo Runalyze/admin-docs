@@ -18,9 +18,9 @@ Upgrade from 2.4 to 2.5
 3. We use a sqlite3 database for the timezone recognization. You need the packages `spatialite-bin` and `php5-sqlite` installed on your system. 
 
 You also need to download ``http://cdn.runalyze.com/update/timezone.sqlite`` and put the database to the ``data``-directory. 
-Also you have to edit the php.ini and make sure that the ``sqlite3.extension_dir`` is set.
+Also you have to edit the php.ini and make sure that the ``sqlite3.extension_dir`` is correctly set. (Wherever the mod `mod_spatialite` is located)
 
-4. Execute the ``refcator-timezone.php`` script. (no database connection has to be set)
+4. Execute the ``refactor-timezone.php`` script. (no database connection has to be set)
 
 5. Everything should be fine now. Please login into you account. You may have to change your timezone in the account settings. 
 
