@@ -4,6 +4,14 @@
 Update instructions
 ===================
 
+General instructions
+********************
+
+* RUNALYZE follows `semantic versioning <http://semver.org/>`_.
+* If not stated otherwise, patch updates do not require any further adjustments. Just copy the files into your working directory.
+* If not stated otherwise, major and minor updates require specific adjustments. You have to follow the update process for each minor version. We can't guarantee that the latest version will contain all required files for an update to a previous version.
+* From v2.4 on, all installation specific files are in ``date/``. Take care that you don't overwrite this directory.
+
 .. warning:: Never ever forget to make a backup before updating or changing your RUNALYZE installation. (You break it - you fix it)
 
 
@@ -13,12 +21,12 @@ Upgrade from 2.4 to 2.5
 
 2. Open ``runalyze/update.php`` in your browser and update from v2.4 to v2.5. 
 
-.. note:: The following step is not necessary for a working RUNALYZE installation/update. You can just skip this step if you cannot change your system like that.
+.. note:: The following step is an optional enhancement. Skip this step if you cannot or do not want to get a working spatialite lib.
 
 3. We use a sqlite3 database for the timezone recognization. You need the packages `spatialite-bin` and `php5-sqlite` installed on your system. 
 
 You also need to download ``http://cdn.runalyze.com/update/timezone.sqlite`` and put the database to the ``data``-directory. 
-Also you have to edit the php.ini and make sure that the ``sqlite3.extension_dir`` is correctly set. (Wherever the mod `mod_spatialite` is located)
+In addition, you have to edit your php.ini and make sure that ``sqlite3.extension_dir`` is set correctly. (Wherever `mod_spatialite` is located)
 
 4. Execute the ``refactor-timezone.php`` script. (no database connection has to be set)
 
@@ -41,6 +49,7 @@ Upgrade from 2.3 to 2.4
 7. Maybe you have to adjust the permissions for ``data/*``
 
 .. note:: If have local srtm files you should move them from ``inc/data/gps/srtm`` to ``data/srtm``
+
 Upgrade from 2.2 to 2.3
 ***********************
 1. Purge your runalyze/ directory except for config.php and extract the downloaded archive of v2.3.
