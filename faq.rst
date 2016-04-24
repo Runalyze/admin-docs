@@ -84,19 +84,23 @@ Common problems
 
 Import/Export is not working
 ----------------------------
-Check if the following folders are existing and that they have writing permissions::
+Check that the following directories exist and are writable::
 
-        /log/
-        /inc/export/files/
-        /inc/import/files/
-        /plugin/RunalyzePluginTool_DbBackup/backup/
-        /plugin/RunalyzePluginTool_DbBackup/import/
+        /data/backup-tool/
+        /data/cache/
+        /data/import/
+        /data/log/
 
 The public activity view is not working
 ---------------------------------------
 Add the following line to your ``.htaccess`` file::
 
      RewriteBase /
+
+You may need to set a special base if your RUNALYZE installation is located in a subdirectory of your domain.
+If you access RUNALYZE via yourdomain.com/runalyze/ you may need to use::
+
+	 RewriteBase /runalyze
 
 My RUNALYZE version is only in english
 --------------------------------------
