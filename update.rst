@@ -11,6 +11,7 @@ General instructions
 * If not stated otherwise, patch updates do not require any further adjustments. Just copy the files into your working directory.
 * If not stated otherwise, major and minor updates require specific adjustments. You have to follow the update process for each minor version. We can't guarantee that the latest version will contain all required files for an update to a previous version.
 * From v2.4 on, all installation specific files are in ``data/``. Take care that you don't overwrite this directory.
+* Execute the update (sql files in `inc/install/`) or refactorscripts via cli if you have big installations or a slow server 
 
 .. warning:: Never ever forget to make a backup before updating or changing your RUNALYZE installation. (You break it - you fix it)
 
