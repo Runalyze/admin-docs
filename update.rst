@@ -14,6 +14,13 @@ General instructions
 
 .. warning:: Never ever forget to make a backup before updating or changing your RUNALYZE installation. (You break it - you fix it)
 
+Upgrade from 2.5 to 2.6
+***********************
+1. Purge your runalyze/ directory except for the ``data`` folder and extract the downloaded archive of v2.6.
+
+2. Open ``runalyze/update.php`` in your browser and update from v2.5 to v2.6. 
+
+3. Done! Really! No further steps are necessary! ;)
 
 Upgrade from 2.4 to 2.5
 ***********************
