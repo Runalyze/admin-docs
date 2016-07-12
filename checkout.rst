@@ -10,7 +10,6 @@ GitHub offers a good tutorial `How to set up Git <https://help.github.com/articl
 Required tools
 --------------
 Whereas our official release contains all required dependencies, developers and users of our dev version need to install them themselves.
-npm, bower and grunt are required in some branches and for some future release.
 
 * `composer <https://getcomposer.org/doc/00-intro.md#system-requirements>`_
 * `npm <https://nodejs.org/download/>`_
@@ -46,5 +45,4 @@ Some branches and some future version will require npm, bower and grunt. In that
 
 Installation of RUNALYZE
 ------------------------
-Now you can continue with the default installation of RUNALYZE.
-You need to create your own ``config.php`` containing your database credentials and setup the database structure from ``inc/install/structure.sql``.
+Now you can continue with the default installation of RUNALYZE. Use the :doc:`install`
