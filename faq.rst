@@ -93,7 +93,8 @@ Check that the following directories exist and are writable::
 
 The public activity view is not working
 ---------------------------------------
-Add the following line to your ``.htaccess`` file::
+All shared views require ``mod_rewrite``. RUNALYZE comes with a pre-configured ``.htaccess`` file in its root directory. Make sure that the file is there and that ``mod_rewrite`` is enabled.
+If the public activity view is still not working you may need to set the ``RewriteBase``::
 
      RewriteBase /
 
