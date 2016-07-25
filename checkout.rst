@@ -37,7 +37,7 @@ To install all current dependencies, open a terminal, switch to your RUNALYZE di
     npm install
     gulp
 
-You may need to install `gulp-cli` globally: `npm install -g gulpjs/gulp-cli`
+You may need to install ``gulp-cli`` globally: ``npm install -g gulpjs/gulp-cli``
 
 Installation of RUNALYZE
 ------------------------
@@ -45,5 +45,6 @@ Now you can continue with the default installation of RUNALYZE, see :doc:`instal
 
 Further hints
 -------------
-* Adjust your `web/.htaccess` to use `app_dev.php` instead of `app.php` if you want to use the dev environment.
-* Clear your `var/cache/prod/` (or `var/cache/dev/`) to clear the cache.
+* Adjust ``web/.htaccess`` to use ``web/app_dev.php`` instead of ``web/app.php`` if you want to use the dev environment.
+* You may need to adjust ``web/app_dev.php`` if some *You are not allowed to access this file.* message appears.
+* Clear ``var/cache/prod/`` (or ``var/cache/dev/``) to clear the cache.

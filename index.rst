@@ -25,6 +25,7 @@ Contents:
    :caption: Configuration
 
    configuration
+   templates
 
 .. toctree::
    :maxdepth: 2

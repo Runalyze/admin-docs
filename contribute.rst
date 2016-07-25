@@ -33,8 +33,8 @@ without those getting added to the pull.
 To create a topic branch, its easiest to use the convenient ``-b`` argument to ``git
 checkout``::
 
-    git checkout -b my-patch-for-xyz
-    Switched to a new branch 'my-patch-for-xyz'
+    git checkout -b patch/for-xyz
+    Switched to a new branch 'patch/for-xyz'
 
 You should use a verbose enough name for your branch so it is clear what it is
 about.  Now you can commit your changes and regularly merge in the upstream
@@ -44,7 +44,7 @@ When you are ready to generate a pull request, either for preliminary review,
 or for consideration of merging into the project you must first push your local
 topic branch back up to GitHub::
 
-    git push origin my-patch-for-xyz
+    git push origin patch/for-xyz
 
 Now when you go to your fork on GitHub, you will see this branch listed under
 the "Source" tab where it says "Switch Branches".  Go ahead and select your
@@ -89,12 +89,12 @@ Run the tests!
 --------------
 Before you submit a pull request, please run all unit tests via::
 
-    phpunit --colors -c tests/config.xml
+    ./vendor/bin/phpunit -c tests/config.xml
 
 Travis CI will run these tests as well but it's bad practice to wait for these results as you can run all tests locally.
 You may need to create (or update) a test database if you haven't done so::
 
-    mysql -uroot -e 'SET @@global.sql_mode = TRADITIONAL; CREATE DATABASE runalyze_unittest;'
+    mysql -uroot -e 'SET @@global.sql_mode = TRADITIONAL; CREATE DATABASE runalyze_test; CREATE DATABASE runalyze_unittest;'
     mysql runalyze_unittest < inc/install/structure.sql
 
 If you add code you need to add tests!
