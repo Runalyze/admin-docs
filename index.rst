@@ -17,8 +17,9 @@ Contents:
    :caption: Installation & Update
 
    install
-   old-install
+   install-legacy
    update
+   update-legacy
 
 .. toctree::
    :maxdepth: 2

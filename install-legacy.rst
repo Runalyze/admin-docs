@@ -1,13 +1,16 @@
 .. _old-install:
 
 
-Outdated installation instructions
-=========================
+Installation instructions for v2.x
+==================================
 
-.. warning:: This is the old installation instruction for all versions before version 3.0!
+.. warning:: These are the old installation instructions for all versions before version 3.0!
 
 The following instructions are valid only for official `RUNALYZE releases before version 3 <https://github.com/Runalyze/Runalyze/releases>`_.
 If you want to use our current development version, have a look at our :doc:`checkout instructions <checkout>`.
+
+General instructions
+--------------------
 
 In general, RUNALYZE requires at least PHP 5.4+ and MySQL 5.0.0+.
 To install an official release, download the respective \*.zip or \*.tar.gz file, unpack the archive and open ``install.php`` from that directory with your browser.
@@ -18,7 +21,6 @@ You need an API-Key for the OpenWeatherMap weather data. You can get it at `open
 
 Ubuntu/Debian distributions
 ---------------------------
-
 Packages: php-gettext libxml2 gettext 
 
 You may need to install the corresponding locales to get the translations running:
@@ -27,21 +29,10 @@ If not you have to install the locales on the system(the following example is fo
 
     sudo locale-gen de_DE.UTF-8
     sudo service apache2 restart
-    
 
-Windows
--------
-
-...
-
-MacOS
------
-
-...
 
 FreeNAS jail
 ------------
-
 1. Create new FreeNAS jail
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
  * VIMAGE: checked
