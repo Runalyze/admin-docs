@@ -43,6 +43,12 @@ Installation of RUNALYZE
 ------------------------
 Now you can continue with the default installation of RUNALYZE, see :doc:`install`.
 
+Stay up to date
+---------------
+You can use ``git pull`` to pull recent changes from our master branch to your
+local checkout. You may need to run ``composer update``, ``npm update`` and
+``gulp`` to update all dependencies.
+
 Further hints
 -------------
 * Adjust ``web/.htaccess`` to use ``web/app_dev.php`` instead of ``web/app.php`` if you want to use the dev environment.

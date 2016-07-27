@@ -28,7 +28,7 @@ Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust at leas
     database_password: xxx       # database password
 
 
-Afterwards open ``/install`` in your browser and follow the instructions. This will work only the database settings are correct.
+Afterwards open ``/install`` in your browser and follow the instructions. This will work only if the database settings are correct.
 
 
 Ubuntu/Debian distributions
