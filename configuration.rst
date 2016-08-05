@@ -8,6 +8,14 @@ RUNALYZE needs at least database parameters to work. Copying a default
 ``app/config/default_config.yml`` to ``data/config.yml`` is part of the
 :doc:`Installation process <install>`.
 
+All parameters are optional. If they are not in your custom ``data/config.yml``
+default values from ``app/config/default_config.yml`` will be used. Still, we
+recommend to include all parameters in your custom configuration.
+
+.. note::
+    You need to clear your cache (``var/cache/prod/`` in general) for the
+    changes to take effect.
+
 Examplary configuration
 -----------------------
 ::
@@ -21,6 +29,7 @@ Examplary configuration
       database_user: root
       database_password:
       secret: please_change_this_secret
+      update_disabled: no
       user_can_register: true
       user_cant_login: false
       user_disable_account_activation: false
@@ -62,6 +71,11 @@ database\_password
 secret
     Installation specific secret that is used for hashing. Just use your own
     string.
+update\_disabled
+    Setting this parameter to ``yes`` will disable all pages for installing and
+    updating RUNALYZE to protect public installations. Updates via console are
+    still possible. This parameter defaults to ``no`` such that the installation
+    is possible.
 user\_can\_register
     Flag if users can register. Set to false to disable registration form.
 user\_cant\_login
