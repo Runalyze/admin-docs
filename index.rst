@@ -1,12 +1,19 @@
-.. RUNALYZE administration documentation documentation master file, created by
-   sphinx-quickstart on Thu Sep 17 17:31:00 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+RUNALYZE docs for admins
+========================
 
-Welcome to RUNALYZE administration documentation!
-=================================================================
+These docs are for admins hosting an installation of `RUNALYZE <https://runalyze.com>`_.
+If you're looking for the user docs visit our `Help <https://help.runalyze.com/>`_.
 
-Contents:
+.. note::
+   RUNALYZE started as one-man-project with only one user and has grown to an 
+   app with around 10.000 users of our `official online version <https://runalyze.com/>`_.
+   Server requirements and complexity of the app and its configuration grow with
+   the feature list. Please understand that our main focus is on implementing
+   new features and serving a performant online version. Therefore, support for
+   local installations is limited.
+
+Missing something in these docs? Contribute at `Github <https://github.com/Runalyze/admin-docs>`_
+or `open an issue about what's missing <https://github.com/Runalyze/admin-docs/issues/new>`_.
 
 .. toctree::
    :maxdepth: 2
@@ -22,7 +29,16 @@ Contents:
    :caption: Installation & Update
 
    install
+   install-legacy
    update
+   update-legacy
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Configuration
+
+   configuration
+   templates
 
 .. toctree::
    :maxdepth: 2
@@ -30,15 +46,3 @@ Contents:
 
    checkout
    contribute
-
-
-
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

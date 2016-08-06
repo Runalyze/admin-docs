@@ -1,0 +1,38 @@
+.wy-nav-content-wrap a,
+.wy-nav-content-wrap a:visited {
+    color: #7bbd5b;
+}
+
+.wy-nav-content-wrap a:hover,
+.wy-nav-content-wrap a:active {
+    color: #7bbd5b;
+}
+
+.wy-side-nav-search {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #7bbd5b;
+}
+
+.wy-side-nav-search .logo-container {
+    background: #fcfcfc;
+    padding: 0.809em;
+    margin-bottom: 0.809em;
+}
+
+.wy-side-nav-search .logo-container img {
+    background: #fcfcfc;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.wy-side-nav-search .wy-form {
+    padding: 0 0.809em;
+}
+
+.wy-side-nav-search input[type=text] {
+    border: 0;
+}

@@ -10,12 +10,11 @@ GitHub offers a good tutorial `How to set up Git <https://help.github.com/articl
 Required tools
 --------------
 Whereas our official release contains all required dependencies, developers and users of our dev version need to install them themselves.
-npm, bower and grunt are required in some branches and for some future release.
 
 * `composer <https://getcomposer.org/doc/00-intro.md#system-requirements>`_
 * `npm <https://nodejs.org/download/>`_
-* `bower <http://bower.io/>`_: ``sudo npm install -g bower``
-* `grunt <http://gruntjs.com/>`_: ``sudo npm install -g grunt-cli``
+* `bower <http://bower.io/>`_: *will be installed via npm*
+* `gulp <https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md>`_: *will be installed via npm*
 
 Clone our repository
 --------------------
@@ -35,16 +34,23 @@ Installation of dependencies
 To install all current dependencies, open a terminal, switch to your RUNALYZE directory and type the following::
 
     composer install --prefer-dist
-    php build/build.php translations
-
-Some branches and some future version will require npm, bower and grunt. In that case you need to run the following commands::
-
-    composer install --prefer-dist
-    bower install
     npm install
-    grunt dev
+    gulp
+
+You may need to install ``gulp-cli`` globally: ``npm install -g gulpjs/gulp-cli``
 
 Installation of RUNALYZE
 ------------------------
-Now you can continue with the default installation of RUNALYZE.
-You need to create your own ``config.php`` containing your database credentials and setup the database structure from ``inc/install/structure.sql``.
+Now you can continue with the default installation of RUNALYZE, see :doc:`install`.
+
+Stay up to date
+---------------
+You can use ``git pull`` to pull recent changes from our master branch to your
+local checkout. You may need to run ``composer update``, ``npm update`` and
+``gulp`` to update all dependencies.
+
+Further hints
+-------------
+* Adjust ``web/.htaccess`` to use ``web/app_dev.php`` instead of ``web/app.php`` if you want to use the dev environment.
+* You may need to adjust ``web/app_dev.php`` if some *You are not allowed to access this file.* message appears.
+* Clear ``var/cache/prod/`` (or ``var/cache/dev/``) to clear the cache.
