@@ -6,7 +6,7 @@ Configuration
 
 RUNALYZE needs at least database parameters to work. Copying a default
 ``app/config/default_config.yml`` to ``data/config.yml`` is part of the
-:doc:`Installation process <install>`.
+:doc:`Installation process <installation/3.x>`.
 
 All parameters are optional. If they are not in your custom ``data/config.yml``
 default values from ``app/config/default_config.yml`` will be used. Still, we
@@ -33,7 +33,6 @@ Examplary configuration
       user_can_register: true
       user_cant_login: false
       user_disable_account_activation: false
-      maintenance: false
       garmin_api_key:
       openweathermap_api_key:
       nokia_here_appid:
@@ -85,8 +84,6 @@ user\_cant\_login
 user\_disable\_account\_activation
     Flag if accounts need to be activated. Set to false to automatically
     activate accounts after registration.
-maintenance
-    Set to `True` to enable maintenance mode. Only updater and installer will work during maintenance mode.
 garmin\_api\_key
     Api key for `GarminCommunicator <http://developer.garmin.com/web-device/garmin-communicator-plugin/get-your-site-key/>`_,
     required to directly import activities from a connected Garmin device

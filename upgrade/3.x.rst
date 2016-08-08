@@ -1,5 +1,3 @@
-.. _update:
-
 
 Update instructions for v3.x
 ============================
@@ -34,7 +32,7 @@ especially under the hood, but will simplify a lot of things in the future.
 
 4. Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust
    the settings to your needs. These are mainly the settings from your
-   ``data/config.php`` in a new format, see :doc:`configuration <configuration>`.
+   ``data/config.php`` in a new format, see :doc:`configuration </configuration>`.
    You can delete your ``data/config.php`` afterwards.
 
 5. The new ``web/`` directory will be used for all page requests. We strongly

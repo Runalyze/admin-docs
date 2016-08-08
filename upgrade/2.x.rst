@@ -1,5 +1,3 @@
-.. _update:
-
 
 Update instructions for v2.x
 ============================

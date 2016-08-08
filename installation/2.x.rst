@@ -1,5 +1,3 @@
-.. _old-install:
-
 
 Installation instructions for v2.x
 ==================================
@@ -7,7 +5,7 @@ Installation instructions for v2.x
 .. warning:: These are the old installation instructions for all versions before version 3.0!
 
 The following instructions are valid only for official `RUNALYZE releases before version 3 <https://github.com/Runalyze/Runalyze/releases>`_.
-If you want to use our current development version, have a look at our :doc:`checkout instructions <checkout>`.
+If you want to use our current development version, have a look at our :doc:`checkout instructions </checkout>`.
 
 General instructions
 --------------------

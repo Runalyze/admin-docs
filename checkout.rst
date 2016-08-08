@@ -41,13 +41,18 @@ You may need to install ``gulp-cli`` globally: ``npm install -g gulpjs/gulp-cli`
 
 Installation of RUNALYZE
 ------------------------
-Now you can continue with the default installation of RUNALYZE, see :doc:`install`.
+Now you can continue with the default installation of RUNALYZE, see :doc:`installation/3.x`.
 
 Stay up to date
 ---------------
 You can use ``git pull`` to pull recent changes from our master branch to your
 local checkout. You may need to run ``composer update``, ``npm update`` and
 ``gulp`` to update all dependencies.
+
+Database changes will be handled by `doctrine migrations <http://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html>`_
+from v3.0 on. To update your database, simply run::
+
+    php bin/console doctrine:migrations:migrate
 
 Further hints
 -------------

@@ -1,11 +1,9 @@
-.. _install:
-
 
 Installation instructions for v3.x
 ==================================
 
 The following instructions are valid only for official `RUNALYZE releases starting from version 3.0 <https://github.com/Runalyze/Runalyze/releases>`_.
-If you want to use our current development version, have a look at our :doc:`checkout instructions <checkout>`.
+If you want to use our current development version, have a look at our :doc:`checkout instructions </checkout>`.
 
 In general, RUNALYZE requires at least PHP 5.5.9+ and MySQL 5.0.0+. We encourage you to use the latest MySQL versions for future releases (5.7).
 
@@ -57,10 +55,10 @@ Running RUNALYZE on Apache
 
 Create a new virtual host:
 
-.. todo:: Add example configuration
+    TODO: Add example configuration
 
 
 Running RUNALYZE on NGINX
 -------------------------
 
-.. todo:: Add example configuration
+    TODO: Add example configuration
