@@ -38,6 +38,6 @@ especially under the hood, but will simplify a lot of things in the future.
 5. The new ``web/`` directory will be used for all page requests. We strongly
    recommend you to use an individual (sub)domain for your installation and let
    it point directly to ``web/``.
-   There's an ``.htaccess`` in the root directory that should forward all
+   There's an ``.htaccess.dist`` (rename it to ``.htaccess`` if you need it) in the root directory that should forward all
    requests to ``web/`` otherwise, but it's your responsibility that nobody can
    access your ``data/config.yml``.
