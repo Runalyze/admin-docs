@@ -22,7 +22,7 @@ Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust at leas
     database_prefix: runalyze_   # table prefix of the new RUNALYZE installation
     database_port: 3306          # port of the database server (normally 3306)
     database_name: runalyze      # database name
-    database_user: root          # database username  
+    database_user: root          # database username
     database_password: xxx       # database password
 
 
@@ -32,7 +32,7 @@ Afterwards open ``/install`` in your browser and follow the instructions. This w
 Ubuntu/Debian distributions
 ---------------------------
 
-Packages: php-gettext libxml2 gettext 
+Packages: php-gettext libxml2 gettext
 
 You may need to install the corresponding locales to get the translations running:
 Have a look in ``less /usr/share/i18n/SUPPORTED`` whether the locale is already installed.
@@ -40,11 +40,11 @@ If not you have to install the locales on the system(the following example is fo
 
     sudo locale-gen de_DE.UTF-8
     sudo service apache2 restart
-    
+
 Windows
 -------
 
-.. warning:: We encourage you to use a unix system. We cannot guarantee that RUNALYZE will always be compatible with a Windows system. You will get the best experience with a unix system. 
+.. warning:: We encourage you to use a unix system. We cannot guarantee that RUNALYZE will always be compatible with a Windows system. You will get the best experience with a unix system.
 
 .. warning:: The `ttbin`-Importer will only work with a unix system.
 
@@ -54,11 +54,64 @@ Running RUNALYZE on Apache
 .. warning:: Required Apache modules - You need to enable ``mod_rewrite`` for Apache. On Debian-based systems you can do this by ``a2enmod rewrite``
 
 Create a new virtual host:
+Version: Apache >= 2.4::
 
-    TODO: Add example configuration
+    <VirtualHost *:80>
+        ServerName domain.tld
+        ServerAlias www.domain.tld
+
+        DocumentRoot /var/www/project/web
+        <Directory /var/www/project/web>
+            AllowOverride None
+            Require all granted
+
+            <IfModule mod_rewrite.c>
+                Options -MultiViews
+                RewriteEngine On
+                RewriteCond %{REQUEST_FILENAME} !-f
+                RewriteRule ^(.*)$ app.php [QSA,L]
+            </IfModule>
+        </Directory>
+
+        <Directory /var/www/project/web/bundles>
+            <IfModule mod_rewrite.c>
+                RewriteEngine Off
+            </IfModule>
+        </Directory>
+        ErrorLog /var/log/apache2/project_error.log
+        CustomLog /var/log/apache2/project_access.log combined
+    </VirtualHost>
 
 
 Running RUNALYZE on NGINX
 -------------------------
 
-    TODO: Add example configuration
+Adjust the PHP-FPM config to your needs::
+
+    server {
+        server_name domain.tld www.domain.tld;
+        root /var/www/project/web;
+
+        location / {
+            # try to serve file directly, fallback to app.php
+            try_files $uri /app.php$is_args$args;
+        }
+
+        location ~ ^/app\.php(/|$) {
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_split_path_info ^(.+\.php)(/.*)$;
+            include fastcgi_params;
+
+            fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+            fastcgi_param DOCUMENT_ROOT $realpath_root;
+
+            internal;
+        }
+
+        location ~ \.php$ {
+            return 404;
+        }
+
+        error_log /var/log/nginx/project_error.log;
+        access_log /var/log/nginx/project_access.log;
+    }
