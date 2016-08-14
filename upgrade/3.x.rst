@@ -22,6 +22,8 @@ Upgrade from 2.6 to 3.0
 Since version 3.0, RUNALYZE is based on Symfony. This causes some major changes,
 especially under the hood, but will simplify a lot of things in the future.
 
+.. warning:: You will need at least PHP 5.5.9+ for this release!
+
 1. Purge your runalyze/ directory except for the ``data/`` directory and extract
    the downloaded archive of v3.0.
 
