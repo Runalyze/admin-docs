@@ -31,8 +31,8 @@ Examplary configuration
       secret: please_change_this_secret
       update_disabled: no
       user_can_register: true
-      user_cant_login: false
       user_disable_account_activation: false
+      maintenance: false
       garmin_api_key:
       openweathermap_api_key:
       nokia_here_appid:
@@ -78,12 +78,11 @@ update\_disabled
     is possible.
 user\_can\_register
     Flag if users can register. Set to false to disable registration form.
-user\_cant\_login
-    Flag if users can login. Set to true to disable login form (e.g. while
-    updating your installation).
 user\_disable\_account\_activation
     Flag if accounts need to be activated. Set to false to automatically
     activate accounts after registration.
+maintenance
+    Set to `True` to enable maintenance mode. Only updater and installer will work during maintenance mode.
 garmin\_api\_key
     Api key for `GarminCommunicator <http://developer.garmin.com/web-device/garmin-communicator-plugin/get-your-site-key/>`_,
     required to directly import activities from a connected Garmin device
