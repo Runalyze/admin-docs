@@ -3,6 +3,19 @@
 Frequently Asked Questions
 ==========================
 
+General
+********
+
+When do you release new releases?
+**********************************
+We are deploying new release in the first place to our official hosted version at `RUNALYZE.com <https://runalyze.com>`_. 
+
+This allows us to identify problems before we release new versions for you all. Consider this as a quality assurance. 
+
+Releasing a new version takes time and effort (updating the documentation, writing blog entries, distribute the releases on all our communication channels). Just relax and wait patiently for new releases.
+
+Normally we are releasing a new version within a week after deploying it to our official hosted version.
+
 Error messages
 **************
 
