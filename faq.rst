@@ -29,7 +29,7 @@ The following error may appear while trying to view an activity::
 
 Your PHP version is too old. RUNALYZE 2.1+ requires at least PHP 5.4. Please update your server or ask your provider.
 
-.. note:: We recommend PHP 5.6!
+.. note:: We recommend PHP 5.6 pr PHP 7.0!
 
 
 PHP Warning: Missing date.timezone setting
@@ -81,6 +81,14 @@ Remember the shown ``activityid``, delete this row from ``runalyze_trackdata`` b
 
 Common problems
 ***************
+
+RUNALYZE does not show up completely (MySQL Only Full Group by problem)
+------------------------------------------------------------------------
+
+Some queries are not `ONLY_FULL_GROUP_BY` compatible. If you are using MySQL 5.7 the sql mode `ONLY_FULL_GROUP_BY` is enabled by default. You have to `disable this mode <http://stackoverflow.com/questions/23921117/disable-only-full-group-by/36033983#36033983>`_. 
+
+.. note::
+    There's an `open issue <https://github.com/Runalyze/Runalyze/issues/1790>`_ to make all queries `ONLY_FULL_GROUP_BY` compatible.
 
 Import/Export is not working
 ----------------------------
