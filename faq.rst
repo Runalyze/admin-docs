@@ -6,7 +6,7 @@ Frequently Asked Questions
 General
 ********
 
-When do you release new releases?
+When do you release new versions?
 **********************************
 We are deploying new release in the first place to our official hosted version at `RUNALYZE.com <https://runalyze.com>`_. 
 
