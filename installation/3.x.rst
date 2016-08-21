@@ -108,10 +108,6 @@ Adjust the PHP-FPM config to your needs::
             internal;
         }
 
-        location ~ \.php$ {
-            return 404;
-        }
-
         error_log /var/log/nginx/project_error.log;
         access_log /var/log/nginx/project_access.log;
     }
