@@ -88,9 +88,9 @@ garmin\_api\_key
     required to directly import activities from a connected Garmin device
 openweathermap\_api\_key
     Api key for `openweathermap.org <http://openweathermap.org/api>`_, required
-    to load weather data
+    to load weather data. `Free key <http://openweathermap.org/price>`_ does only have access to current weather
 nokia\_here\_appid
-    App id for HERE access, see <https://developer.here.com/>_, required to use
+    App id for HERE access, see `developer.here.com <https://developer.here.com/>`_, required to use
     HERE maps
 nokia\_here\_token
     Token for HERE access
