@@ -47,6 +47,10 @@ You may need to install the corresponding locales to get the translations runnin
 Have a look in ``less /usr/share/i18n/SUPPORTED`` whether the locale is already installed.
 If not you have to install the locales on the system (the following example is for the german language)::
 
+
+Timezone recognization
+^^^^^^^^^^^^^^^^^^^^^^^
+
 The following is only needed for the timezone recognization. It has no effects if not installed:
 
 Required packages:
@@ -58,8 +62,26 @@ Required packages:
 You also need to download ``http://cdn.runalyze.com/update/timezone.sqlite`` and place that file into your ``data`` directory. 
 In addition, you have to edit your ``php.ini`` and make sure that ``sqlite3.extension_dir`` is set correctly. (wherever ``mod_spatialite`` is located)
 
+Elevation correction via satellite files 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Have a look at our help page for a short `introduction to the satellite files <https://help.runalyze.com/en/latest/calculations/elevation.html?highlight=srtm#elevation-correction-via-satellite-data>`_.
+
+If you want to use this elevation correction you have to download the srtm files from `dwtkns <http://dwtkns.com/srtm/>`_. You only have to download that parts of the world you need. 
+
+Extract the zip files and put the ``tif`` file into the directory ``data/srtm``. That`s all!
+
+
+Last but not least
+^^^^^^^^^^^^^^^^^^^
+You may need to install the corresponding locales to get the translations running:
+Have a look in ``less /usr/share/i18n/SUPPORTED`` whether the locale is already installed.
+If not you have to install the locales on the system(the following example is for the german language)::
+
     sudo locale-gen de_DE.UTF-8
-    sudo service apache2 restart
+
+And now just follow the `General installation` guide at the top of the page.
+
 
 Windows
 -------
