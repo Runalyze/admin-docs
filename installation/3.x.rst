@@ -35,6 +35,8 @@ Ubuntu/Debian distributions
 Packages: 
 
 * php-gettext 
+* php-zip
+* php-xml
 * libxml2 
 * gettext
 * php
