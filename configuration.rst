@@ -16,6 +16,9 @@ recommend to include all parameters in your custom configuration.
     You need to clear your cache (``var/cache/prod/`` in general) for the
     changes to take effect.
 
+.. warning::
+    Strings containing special characters must be enclosed in quotes, see `these docs <http://symfony.com/doc/current/components/yaml/yaml_format.html#strings>`_.
+
 Examplary configuration
 -----------------------
 ::
@@ -27,7 +30,7 @@ Examplary configuration
       database_port: 3306
       database_name: runalyze
       database_user: root
-      database_password:
+      database_password: "My$3cr3tP4$$w0rd!"
       secret: please_change_this_secret
       update_disabled: no
       user_can_register: true
