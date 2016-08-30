@@ -27,7 +27,7 @@ especially under the hood, but will simplify a lot of things in the future.
 1. Purge your runalyze/ directory except for the ``data/`` directory and extract
    the downloaded archive of v3.0.
 
-2. Create an empty directory ``data/sessions``.
+2. Create an empty directory ``data/sessions`` & ``data/views`` (if they not already exists).
 
 3. Make sure that ``data/sessions``, ``var/cache`` and ``var/logs`` are
    writable.

@@ -13,8 +13,8 @@ Report a bug
 ------------
  *  `Github <https://github.com/Runalyze/Runalyze/issues/new>`_ : Create a new issue at github.
 
-How to report a bug
---------------------
+How to report a problem
+------------------------
 
  * Make sure that you checked the documentation
  * Make sure you hoster/server fulfill the requirements to run RUNALYZE on it
