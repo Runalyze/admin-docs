@@ -16,6 +16,7 @@ cannot guarantee that all parts of RUNALYZE will work as expected.
 
 To install an official release, download the respective \*.zip or \*.tar.gz file and unpack the archive.
 
+
 Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust at least the following settings::
 
     database_host: 127.0.0.1     # database hostname or ip  (e.g. localhost, 127.0.0.1 ...)
@@ -28,16 +29,26 @@ Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust at leas
 
 Afterwards open ``/install`` in your browser and follow the instructions. This will work only if the database settings are correct.
 
+Installation on a webspace
+---------------------------
+If you are using a webhosting space (like e.g. `Netcup* <https://www.netcup.eu/bestellen/produkt.php?produkt=1213>`_) it should be really easy to install RUNALYZE.
+
+.. note:: We recommend a webspace with ssh access (for longer lasting tasks), perl (for fit file import) and cronjobs (needed for later versions). Do not forget that you need at least PHP 5.5.9+
+
+1. Download the latest version from `Github <https://github.com/Runalyze/Runalyze/releases>`_ and extract it to a folder of your choice.
+2. Pay attention to the directories. the ``web`` directory is the public web directory. Everything above should be better not visible to the public. Best practice is to setup a subdomain and point it to the ``web`` directory
+3. Copy and adjust the configuration (have a look at the `General` section on this page)
+
 
 Ubuntu/Debian distributions
 ---------------------------
 
-Packages: 
+Packages:
 
-* php-gettext 
+* php-gettext
 * php-zip
 * php-xml
-* libxml2 
+* libxml2
 * gettext
 * php
 * php-intl
@@ -57,19 +68,19 @@ The following is only needed for the timezone recognization. It has no effects i
 
 Required packages:
 
-* php-sqlite3 
+* php-sqlite3
 * sqlite3
 * libsqlite3-mod-spatialite (at least on ubuntu 16.04)
 
-You also need to download ``http://cdn.runalyze.com/update/timezone.sqlite`` and place that file into your ``data`` directory. 
+You also need to download ``http://cdn.runalyze.com/update/timezone.sqlite`` and place that file into your ``data`` directory.
 In addition, you have to edit your ``php.ini`` and make sure that ``sqlite3.extension_dir`` is set correctly. (wherever ``mod_spatialite`` is located)
 
-Elevation correction via satellite files 
+Elevation correction via satellite files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Have a look at our help page for a short `introduction to the satellite files <https://help.runalyze.com/en/latest/calculations/elevation.html?highlight=srtm#elevation-correction-via-satellite-data>`_.
 
-If you want to use this elevation correction you have to download the srtm files from `dwtkns <http://dwtkns.com/srtm/>`_. You only have to download that parts of the world you need. 
+If you want to use this elevation correction you have to download the srtm files from `dwtkns <http://dwtkns.com/srtm/>`_. You only have to download that parts of the world you need.
 
 Extract the zip files and put the ``tif`` file into the directory ``data/srtm``. That`s all!
 
@@ -92,12 +103,30 @@ Windows
 
 .. warning:: The `ttbin`-Importer will only work with a unix system.
 
-In order to use the `fit`-Importer you need to install perl and have to set the corresponding path in the configuration
+In order to use the `fit`-Importer you need to install perl and have to set the corresponding path in the configuration.
+
+The installation of a webserver (apache) and database server (MariaDB) is really easy. Just use the `XAMPP package <https://www.apachefriends.org/de/index.html>`_. There are enough tutorials on the web, which direct you through the installation of XAMPP.
+
+
+.. note::
+          You are welcome to complete this part of the documentation - Make a pull request at `Github <https://github.com/Runalyze/admin-docs>`_ or send us a text or link to a tutorial.
+
+
+Mac OSX
+--------
+
+The installation of a webserver (apache) and database server (MariaDB) is really easy. Just use the `XAMPP package <https://www.apachefriends.org/de/index.html>`_. There are enough tutorials on the web, which direct you through the installation of XAMPP.
+
+.. note::
+          You are welcome to complete this part of the documentation - Make a pull request at `Github <https://github.com/Runalyze/admin-docs>`_ or send us a text or link to a tutorial.
+
 
 Running RUNALYZE on Apache
 --------------------------
 
 .. warning:: Required Apache modules - You need to enable ``mod_rewrite`` for Apache. On Debian-based systems you can do this by ``a2enmod rewrite``
+
+Please take a look at the `symfony documentation <http://symfony.com/doc/current/setup/web_server_configuration.html>`_ for alternatives of the apache configuration if you having problems with this one.
 
 Create a new virtual host:
 Version: Apache >= 2.4::
@@ -119,11 +148,6 @@ Version: Apache >= 2.4::
             </IfModule>
         </Directory>
 
-        <Directory /var/www/project/web/bundles>
-            <IfModule mod_rewrite.c>
-                RewriteEngine Off
-            </IfModule>
-        </Directory>
         ErrorLog /var/log/apache2/project_error.log
         CustomLog /var/log/apache2/project_access.log combined
     </VirtualHost>
