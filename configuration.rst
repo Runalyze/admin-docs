@@ -87,7 +87,7 @@ user\_disable\_account\_activation
 maintenance
     Set to `True` to enable maintenance mode. Only updater and installer will work during maintenance mode.
 garmin\_api\_key
-    Api key for `GarminCommunicator <http://developer.garmin.com/web-device/garmin-communicator-plugin/get-your-site-key/>`_,
+    Api key for `GarminCommunicator <https://my.garmin.com/api/communicator/key-generator.jsp/>`_,
     required to directly import activities from a connected Garmin device
 openweathermap\_api\_key
     Api key for `openweathermap.org <http://openweathermap.org/api>`_, required
