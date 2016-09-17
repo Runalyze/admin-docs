@@ -14,7 +14,7 @@ recommend you to use a specific (sub)domain for your RUNALYZE installation.
 Otherwise, it's your responsibility to secure your configuration files and we
 cannot guarantee that all parts of RUNALYZE will work as expected.
 
-To install an official release, download the respective \*.zip or \*.tar.gz file and unpack the archive.
+To install an official release, download the respective \*.zip or \*.tar.gz file and unpack the archive. Check that the files are owned by the webserver user.
 
 
 Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust at least the following settings::
