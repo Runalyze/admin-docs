@@ -21,6 +21,7 @@ How to report a problem
  * Please search the `forum <https://forum.runalyze.com>`_ (and google) first for a solution
  * Please describe your problem as detailed as possible
  * Add a screenshot if you think it might help us
+ * Tell us which PHP (and mysql server) version is running on your system
  * Add error logs from your webserver and runalyze (`var/logs/prod.log` and maybe `var/logs/symfony.log`)
  * When there are problems with an activity file - **Add that file to your report!**
  * Use the `forum <https://forum.runalyze.com>`_ for help requests or to report your problem!
