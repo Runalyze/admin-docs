@@ -47,6 +47,7 @@ Packages:
 
 * php-gettext
 * php-zip
+* php-curl
 * php-xml
 * libxml2
 * gettext
