@@ -95,6 +95,7 @@ Travis CI will run these tests as well but it's bad practice to wait for these r
 You may need to create (or update) a test database if you haven't done so::
 
     mysql -uroot -e 'SET @@global.sql_mode = TRADITIONAL; CREATE DATABASE runalyze_test; CREATE DATABASE runalyze_unittest;'
+    php bin/console --env=test doctrine:schema:update --force --complete
     mysql runalyze_unittest < inc/install/structure.sql
 
 If you add code you need to add tests!
