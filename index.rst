@@ -39,6 +39,7 @@ or `open an issue about what's missing <https://github.com/Runalyze/admin-docs/i
 
    configuration
    templates
+   commands
 
 .. toctree::
    :maxdepth: 2
