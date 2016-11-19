@@ -35,3 +35,15 @@ Cleanup Registrations
    runalyze:cleanup:registrations <days>
 
 Remove all not activated users older than x (default 7) days.
+
+Activities
+---------------
+
+Bulk import
+^^^^^^^^^^^^^
+
+.. code-block:: php
+
+   runalyze:activity:bulk-import <username> <path to folder with activity files>
+
+Imports all activity files within a folder. Will check for duplicates. 
