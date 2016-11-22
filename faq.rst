@@ -111,6 +111,7 @@ Check that the following directories exist and are writable::
         /data/cache/
         /data/import/
         /data/log/
+        /data/sessions/
 
 The public activity view is not working
 ---------------------------------------

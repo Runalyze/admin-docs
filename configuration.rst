@@ -31,7 +31,7 @@ Examplary configuration
       database_name: runalyze
       database_user: root
       database_password: "My$3cr3tP4$$w0rd!"
-      secret: please_change_this_secret
+      secret: "please_change_this_secret"
       update_disabled: no
       user_can_register: true
       user_disable_account_activation: false

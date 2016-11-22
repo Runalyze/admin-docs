@@ -3,6 +3,11 @@
 Commands
 ==============
 
+RUNALYZE offers cli commands for simplifying some tasks.
+You can run them with::
+
+    php bin/console <command>
+
 Install/Update
 ---------------
 

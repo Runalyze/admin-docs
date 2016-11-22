@@ -24,7 +24,7 @@ Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust at leas
     database_port: 3306          # port of the database server (normally 3306)
     database_name: runalyze      # database name
     database_user: root          # database username
-    database_password: xxx       # database password
+    database_password: "xxx"     # database password
 
 
 Afterwards open ``/install`` in your browser and follow the instructions. This will work only if the database settings are correct.
