@@ -22,6 +22,8 @@ Upgrade from 3.0 to 3.1
 Version 3.1 does not require any special adjustments. Just follow the standard
 instructions:
 
+.. warning:: You will need at least PHP 5.6+ for this release!
+
 1. Purge your runalyze/ directory except for the ``data/`` directory and extract
    the downloaded archive of v3.1.
    
