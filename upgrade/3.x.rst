@@ -17,6 +17,16 @@ General instructions
 .. warning:: Never ever forget to make a backup before updating or changing your
     RUNALYZE installation. (You break it - you fix it)
 
+Upgrade from 3.1 to 3.2
+***********************
+Version 3.2 does not require any special adjustments. Just follow the standard instructions:
+
+.. warning:: You will need at least PHP 5.6+ for this release!
+
+1. Purge your runalyze/ directory except for the ``data/`` directory and extract the downloaded archive of v3.2.
+
+2. Run the update via cli (``php bin/console doctrine:migrations:migrate``) or accessing ``/update`` (``update_disabled: no`` is required in your ``data/config.yml``). We recommend to run the update via cli due some long running database updates.
+
 Upgrade from 3.0 to 3.1
 ***********************
 Version 3.1 does not require any special adjustments. Just follow the standard
@@ -26,7 +36,7 @@ instructions:
 
 1. Purge your runalyze/ directory except for the ``data/`` directory and extract
    the downloaded archive of v3.1.
-   
+
 2. Run the update via accessing ``/update`` (``update_disabled: no`` is required
    in your ``data/config.yml``) or via cli (``php bin/console doctrine:migrations:migrate``).
 
