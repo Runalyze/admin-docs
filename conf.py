@@ -66,7 +66,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'RUNALYZE administration'
-copyright = u'2016, RUNALYZE team'
+copyright = u'2017, RUNALYZE team'
 author = u'Hannes Christiansen, Michael Pohl'
 
 # The version info for the project you're documenting, acts as replacement for
