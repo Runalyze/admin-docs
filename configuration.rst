@@ -38,6 +38,7 @@ Examplary configuration
       maintenance: false
       garmin_api_key:
       openweathermap_api_key:
+      darksky_api_key:
       nokia_here_appid:
       nokia_here_token:
       geonames_username:
@@ -92,6 +93,9 @@ garmin\_api\_key
 openweathermap\_api\_key
     Api key for `openweathermap.org <http://openweathermap.org/api>`_, required
     to load weather data. `Free key <http://openweathermap.org/price>`_ does only have access to current weather
+darksky\_api\_key
+    Api key for `darksky.net <http://darksky.net/dev>`_, required
+    to load weather data. `Free key <https://darksky.net/dev/>`_ includes current and historical weather information. (1000 requests per day are free)
 nokia\_here\_appid
     App id for HERE access, see `developer.here.com <https://developer.here.com/>`_, required to use
     HERE maps
