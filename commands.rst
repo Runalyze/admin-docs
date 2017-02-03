@@ -75,7 +75,7 @@ JSON Export for GpxTrackPoster
 
 .. code-block:: php
 
-   runalyze:athlete:poster-json <username> <export directory> <year>
+   runalyze:athlete:poster-json <username> <export directory> <year> <sportid>
 
 Exports the json files for the GPXTrackPoster tool by Florian Pigorsch into a folder. Races (special parameter for the tool) will be exported into the file `special.params` and are shown after the creation of the files.
 
