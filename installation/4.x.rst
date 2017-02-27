@@ -1,0 +1,8 @@
+
+Installation instructions for v4.x
+==================================
+
+You can simply follow the :doc:`installation instructions for 3.x </installation/3.x>`.
+
+For differences to v3.x, see :doc:`update instructions for 4.0 </upgrade/4.x>`
+and the new :ref:`queueing system <queueing-system>`.

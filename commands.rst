@@ -77,8 +77,8 @@ JSON Export for GpxTrackPoster
 
    runalyze:athlete:poster-json <username> <export directory> <year> <sportid>
 
-Exports the json files for the GPXTrackPoster tool by Florian Pigorsch into a folder. Races (special parameter for the tool) will be exported into the file `special.params` and are shown after the creation of the files.
+Exports the json files for the GPXTrackPoster tool by Florian Pigorsch into a folder. Races (special parameter for the tool) will be exported into the file ``special.params`` and are shown after the creation of the files.
 
-You need to install the adjusted version of `GPXTrackPoster for RUNALYZE by laufhannes <https://github.com/laufhannes/GpxTrackPoster/tree/runalyze>`_. The parameter `--json-dir` must point to the folder containing the json-files. Add the `special params` to the command.
+You need to install the adjusted version of `GPXTrackPoster for RUNALYZE by laufhannes <https://github.com/laufhannes/GpxTrackPoster/tree/runalyze>`_. The parameter ``--json-dir`` must point to the folder containing the json-files. Add the ``special params`` to the command.
 
-A svg-file will be created. Use e.g. `inkscape -z -e <poster.png> -h7020 <poster.svg>` to convert it to a png file.
+A svg-file will be created. Use e.g. ``inkscape -z -e <poster.png> -h7020 <poster.svg>`` to convert it to a png file.

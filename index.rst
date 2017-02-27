@@ -28,10 +28,13 @@ or `open an issue about what's missing <https://github.com/Runalyze/admin-docs/i
    :maxdepth: 2
    :caption: Installation & Update
 
+   installation/4.x
    installation/3.x
    installation/2.x
+   upgrade/4.x
    upgrade/3.x
    upgrade/2.x
+   additional-requirements
 
 .. toctree::
    :maxdepth: 2

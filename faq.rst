@@ -63,16 +63,6 @@ This is a very inprecise error message. Sometimes there is only a problem with y
 Please have a look at your server log, where you will find the exact error message.
 If you have this problem you should attach the log to your post.
 
-PHP Fatal error: Class 'RunalyzePluginPanel_Schuhe' not found
--------------------------------------------------------------
-The following error may appear after updating from v2.1 to v2.2 when opening the plugin's configuration::
-
-    PHP Fatal error: Class 'RunalyzePluginPanel_Schuhe' not found in /runalyze/inc/plugin/class.PluginFactory.php on line 149
-
-**Answer:**
-You probably copied the new version into your existing runalyze-directory without removing the old files.
-You can just delete the folder ``/plugin/RunalyzePluginPanel_Schuhe/``.
-
 MySQL error: Cannot add or update a child row
 ---------------------------------------------
 The following error may appear while trying to update your database::
@@ -111,19 +101,8 @@ Check that the following directories exist and are writable::
         /data/cache/
         /data/import/
         /data/log/
+        /data/poster/
         /data/sessions/
-
-The public activity view is not working
----------------------------------------
-All shared views require ``mod_rewrite``. RUNALYZE comes with a pre-configured ``.htaccess`` file in its root directory. Make sure that the file is there and that ``mod_rewrite`` is enabled.
-If the public activity view is still not working you may need to set the ``RewriteBase``::
-
-     RewriteBase /
-
-You may need to set a special base if your RUNALYZE installation is located in a subdirectory of your domain.
-If you access RUNALYZE via yourdomain.com/runalyze/ you may need to use::
-
-	 RewriteBase /runalyze
 
 My RUNALYZE version is only in english
 --------------------------------------

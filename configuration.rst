@@ -42,9 +42,12 @@ Examplary configuration
       nokia_here_appid:
       nokia_here_token:
       geonames_username:
-      perl_path:
-      ttbin_path:
-      sqlite_mod_spatialite:
+      perl_path: /usr/bin/perl
+      python3_path: /usr/bin/python3
+      rsvg_path: /usr/bin/rsvg-convert
+      inkscape_path: /usr/bin/inkscape
+      ttbin_path: ../call/perl/ttbincnv
+      sqlite_mod_spatialite: libspatialite.so.5
       mail_sender:
       mail_name:
       smtp_host:
@@ -52,6 +55,8 @@ Examplary configuration
       smtp_security:
       smtp_username:
       smtp_password:
+      backup_storage_period: 5
+      poster_storage_period: 5
 
 Configuration variables
 -----------------------
@@ -107,6 +112,12 @@ geonames\_username
 perl\_path
     Path to your perl binary, usually ``/usr/bin/perl`` or something like
     ``C:\[...]\xampp\perl\bin\perl`` on Windows.
+python3\_path
+    Path to your python binary (v3+), usually ``/usr/bin/python3``.
+rsvg\_path
+    Path to your rsvg-convert binary, usually ``/usr/bin/rsvg-convert``.
+inkscape\_path
+    Path to your inkscape binary, usually ``/usr/bin/inkscape``.
 ttbin\_path
     Path to ttbin converter that is required for reading binary ttbin files.
     A compiled version is located under ``call/perl/ttbincnv`` but you may need
@@ -130,3 +141,7 @@ smtp\_username
     Password for smtp server
 smtp\_password
     Password for smtp server
+backup\_storage\_period
+    Default storage period for backups (in days)
+poster\_storage\_period
+    Default storage period for poster (in days)

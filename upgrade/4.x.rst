@@ -1,0 +1,39 @@
+
+Update instructions for v4.x
+============================
+
+General instructions
+********************
+
+* RUNALYZE follows `semantic versioning <http://semver.org/>`_.
+* If not stated otherwise, patch updates do not require any further adjustments.
+  Just copy the files into your working directory.
+* You should be able to update from version 4.0 to the latest 4.x version.
+  Nevertheless, we unfortunately cannot guarantee that skipping a minor version
+  will always work. Therefore you should follow the update process for each
+  minor version.
+* Execute the update via cli if you have big installations or a slow server.
+
+.. warning:: Never forget to make a backup before updating or changing your
+    RUNALYZE installation. (You break it - you fix it)
+
+Upgrade from 3.2 to 4.0
+***********************
+Just follow the standard instructions:
+
+1. Purge your runalyze/ directory except for the ``data/`` directory and extract
+   the downloaded archive of v4.0.
+
+2. Run the update via cli (``php bin/console doctrine:migrations:migrate``) or
+   accessing ``/update`` (``update_disabled: no`` is required in your
+   ``data/config.yml``). We recommend to run the update via cli due some long
+   running database updates.
+
+From v4.0 on, RUNALYZE uses a queueing system for processing long lasting tasks
+in background. See :ref:`additional requirements <queueing-system>`
+for more information about the queueing system and the following requirements
+for the new poster tool:
+
+* python, see :ref:`non-php-languages`
+* rsvg-convert, see :ref:`non-php-tools`
+* inkscape, see :ref:`non-php-tools`
