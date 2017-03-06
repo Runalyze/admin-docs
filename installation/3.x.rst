@@ -25,6 +25,10 @@ Copy ``app/config/default_config.yml`` to ``data/config.yml`` and adjust at leas
     database_name: runalyze      # database name
     database_user: root          # database username
     database_password: "xxx"     # database password
+    
+.. note::
+    You need to clear your cache (``var/cache/prod/`` in general) for the changes to take effect.
+
 
 Adjust your webserver configuration (see example configuration further down on this page).
 
@@ -50,6 +54,7 @@ Packages:
 * php-zip
 * php-curl
 * php-xml
+* php-mbstring
 * libxml2
 * gettext
 * php
