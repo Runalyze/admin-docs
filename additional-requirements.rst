@@ -35,10 +35,17 @@ few seconds. A queueing system is used to process long lasting tasks (e.g.
 generating a complete backup or fancy posters from all your activities) in
 background.
 
-To process the queue, you need to create a cronjob for::
+To process the queue, you need to create a cronjob always running service for::
 
-   runalyze:queue:consume
+   runalyze:queue:consume --env=prod --no-debug (--max-runtime 120) (--max-messages 10) (--stop-when-empty)
 
+Parameters:
+
+* ``--max-runtime <seconds>``  Maximum time in seconds the consumer will run.
+* ``--max-messages <messages>``  Maximum number of messages that should be consumed.
+* ``--stop-when-empty``  Stop consumer when queue is empty.
+
+If you are using a cronjob do always limit the runtime!
 
 Mails
 -----
