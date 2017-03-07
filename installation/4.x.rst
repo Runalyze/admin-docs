@@ -12,11 +12,11 @@ Ubuntu/Debian distributions
 
 All required php packages (Use the corresponding version php packages names):
 
-``php7.0-intl php7.0-sqlite3 php7.0-mbstring php7.0-xml php7.0-curl php7.0-zip php7.0-gettext php7.0-intl``
+``php7.0-intl php7.0-mysql php7.0-sqlite3 php7.0-mbstring php7.0-xml php7.0-curl php7.0-zip php7.0-gettext php7.0-intl``
 
 Further packages:
 
-``perl sqlite3 libsqlite3-mod-spatialite gettext libxml2 python3 python3-pip``
+``perl sqlite3 libsqlite3-mod-spatialite gettext libxml2 python3 python3-pip librsvg2-common inkscape``
 
 Optional:
  * :ref:`Install and configure <time-zone-detection>` the timezone recognization database
@@ -28,7 +28,9 @@ If not you have to install the locales on the system(the following example is fo
 
     sudo locale-gen de_DE.UTF-8
 
-And now just follow the :doc:`installation instructions for 3.x </installation/3.x>`.
+Follow the :doc:`installation instructions for 3.x </installation/3.x>`.
+
+Install the python dependencies for the poster tool: ``pip3 install -r vendor/runalyze/GpxTrackPoster/requirements.txt``
 
 Windows
 -------

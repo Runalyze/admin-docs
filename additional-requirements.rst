@@ -64,6 +64,7 @@ Perl
     recommended to import fit files instead of tcx or similar).
 Python
     Python (v3.x) is required from v4.0 on to generate svg posters.
+    Install the python dependencies via ``pip3 install -r vendor/runalyze/GpxTrackPoster/requirements.txt``
 
 
 .. _non-php-tools:
