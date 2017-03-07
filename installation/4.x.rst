@@ -6,3 +6,47 @@ You can simply follow the :doc:`installation instructions for 3.x </installation
 
 For differences to v3.x, see :doc:`update instructions for 4.0 </upgrade/4.x>`
 and the new :ref:`queueing system <queueing-system>`.
+
+Ubuntu/Debian distributions
+---------------------------
+
+All required php packages (Use the corresponding version php packages names):
+
+``php7.0-intl php7.0-sqlite3 php7.0-mbstring php7.0-xml php7.0-curl php7.0-zip php7.0-gettext php7.0-intl``
+
+Further packages:
+
+``perl sqlite3 libsqlite3-mod-spatialite gettext libxml2 python3 python3-pip``
+
+Optional:
+ * :ref:`Install and configure <time-zone-detection>` the timezone recognization database
+ * :ref:`Download the elevation correction srtm data <elevation-srtm-files>`
+
+You may need to install the corresponding locales to get the translations running:
+Have a look in ``less /usr/share/i18n/SUPPORTED`` whether the locale is already installed.
+If not you have to install the locales on the system(the following example is for the german language)::
+
+    sudo locale-gen de_DE.UTF-8
+
+And now just follow the :doc:`installation instructions for 3.x </installation/3.x>`.
+
+Windows
+-------
+
+.. warning:: We encourage you to use a unix system. RUNALYZE is not fully compatible with a Windows system. You will get the best experience with a unix system.
+
+.. warning:: The dependencies needed for the `ttbin`-Importer and poster tool are only available for unix based systems.
+
+Therefore we will not give any further instructions. You can still use the apache or nginx server configuration mentioned in :doc:`installation instructions for 3.x </installation/3.x>`.
+
+Installation on a webspace
+---------------------------
+If you are using a webhosting space (like e.g. `Netcup* <https://www.netcup.eu/bestellen/produkt.php?produkt=1213>`_) it should be really easy to install RUNALYZE.
+
+.. note:: We recommend a webspace with ssh access (for longer lasting tasks), perl (for fit file import) and cronjobs . Do not forget that you need at least PHP 5.5.9+
+
+.. warning:: Webspace do not fulfil all the requirements. Some features will not be available.
+
+1. Download the latest version (not the source code) from `Github <https://github.com/Runalyze/Runalyze/releases>`_ and extract it to a folder of your choice.
+2. Pay attention to the directories. the ``web`` directory is the public web directory. Everything above should be better not visible to the public. Best practice is to setup a subdomain and point it to the ``web`` directory
+3. Follow the :doc:`installation instructions for 3.x </installation/3.x>`.

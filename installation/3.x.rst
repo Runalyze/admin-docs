@@ -50,50 +50,16 @@ Ubuntu/Debian distributions
 
 Packages:
 
-* php-gettext
-* php-zip
-* php-curl
-* php-xml
-* php-mbstring
-* libxml2
-* gettext
-* php
-* php-intl
-* perl
+``php-gettext php-zip php-curl php-xml php-mbstring libxml2 gettext php-intl perl``
 
 (Use the corresponding version php packages names)
 
-You may need to install the corresponding locales to get the translations running:
-Have a look in ``less /usr/share/i18n/SUPPORTED`` whether the locale is already installed.
-If not you have to install the locales on the system (the following example is for the german language)::
+Optional:
+
+ * :ref:`Install and configure <time-zone-detection>` the timezone recognization database
+ * :ref:`Download the elevation correction srtm data <elevation-srtm-files>`
 
 
-Timezone recognization
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The following is only needed for the timezone recognization. It has no effects if not installed:
-
-Required packages:
-
-* php-sqlite3
-* sqlite3
-* libsqlite3-mod-spatialite (at least on ubuntu 16.04)
-
-You also need to download ``http://cdn.runalyze.com/update/timezone.sqlite`` and place that file into your ``data`` directory.
-In addition, you have to edit your ``php.ini`` and make sure that ``sqlite3.extension_dir`` is set correctly. (wherever ``mod_spatialite`` is located)
-
-Elevation correction via satellite files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Have a look at our help page for a short `introduction to the satellite files <https://help.runalyze.com/en/latest/calculations/elevation.html?highlight=srtm#elevation-correction-via-satellite-data>`_.
-
-If you want to use this elevation correction you have to download the srtm files from `dwtkns <http://dwtkns.com/srtm/>`_. You only have to download that parts of the world you need.
-
-Extract the zip files and put the ``tif`` file into the directory ``data/srtm``. That`s all!
-
-
-Last but not least
-^^^^^^^^^^^^^^^^^^^
 You may need to install the corresponding locales to get the translations running:
 Have a look in ``less /usr/share/i18n/SUPPORTED`` whether the locale is already installed.
 If not you have to install the locales on the system(the following example is for the german language)::
@@ -175,7 +141,7 @@ Adjust the PHP-FPM config to your needs::
         }
 
         location ~ ^/app\.php(/|$) {
-            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_pass unix:/var/run/php/php7.0-fpm.sock; #adjust the socket path to your needs
             fastcgi_split_path_info ^(.+\.php)(/.*)$;
             include fastcgi_params;
 

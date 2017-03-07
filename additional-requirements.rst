@@ -85,6 +85,7 @@ inkscape
     From v4.0 on, our poster tool requires inkscape to convert svg files
     generated as type circular to png files.
 
+.. _elevation-srtm-files:
 
 Elevation data from srtm files
 ------------------------------
@@ -115,6 +116,7 @@ Elevation data
     recommended, but geonames: `geonames.org <http://www.geonames.org/>`_
     offers free data as well.
 
+.. _time-zone-detection:
 
 Time zone detection
 -------------------
@@ -133,7 +135,7 @@ Required packages:
 
 Database file (has to be stored as ``data/timezone.sqlite``:
 
-* http://cdn.runalyze.com/update/timezone.sqlite
+* https://cdn.runalyze.com/update/timezone.sqlite
 
 In addition, you need to set ``sqlite3.extension_dir`` in your ``php.ini`` to
 wherever ``mod_spatialite`` is located.
