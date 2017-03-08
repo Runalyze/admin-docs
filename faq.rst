@@ -85,6 +85,8 @@ Remember the shown ``activityid``, delete this row from ``runalyze_trackdata`` b
 Common problems
 ***************
 
+.. _sql_mode_only_full_group_by:
+
 RUNALYZE does not show up completely (MySQL Only Full Group by problem)
 ------------------------------------------------------------------------
 

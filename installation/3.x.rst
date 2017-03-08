@@ -5,7 +5,7 @@ Installation instructions for v3.x
 The following instructions are valid only for official `RUNALYZE releases starting from version 3.0 <https://github.com/Runalyze/Runalyze/releases>`_.
 If you want to use our current development version, have a look at our :doc:`checkout instructions </checkout>`.
 
-In general, RUNALYZE requires at least PHP 5.6.0+ and MySQL 5.0.0+. We encourage you to use the latest MySQL versions for future releases (5.7).
+In general, RUNALYZE requires at least PHP 5.6.0+ and MySQL 5.0.0+. We encourage you to use the latest MySQL versions for future releases (5.7), but note that RUNALYZE is incompatible with sql mode ``ONLY_FULL_GROUP_BY`` (see :ref:`faq <sql_mode_only_full_group_by>`).
 
 General
 -------
