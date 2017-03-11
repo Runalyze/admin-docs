@@ -29,6 +29,8 @@ Just follow the standard instructions:
    ``data/config.yml``). We recommend to run the update via cli due some long
    running database updates.
 
+3. Adjust the new :doc:`configuration </configuration>`. parameters. ``backup_storage_period``, ``poster_storage_period``, ``router.request_context.host``, ``router.request_context.scheme``, ``router.request_context.base_url``
+
 From v4.0 on, RUNALYZE uses a queueing system for processing long lasting tasks
 in background. See :ref:`additional requirements <queueing-system>`
 for more information about the queueing system and the following requirements

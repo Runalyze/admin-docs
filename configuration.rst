@@ -48,15 +48,18 @@ Examplary configuration
       inkscape_path: /usr/bin/inkscape
       ttbin_path: ../call/perl/ttbincnv
       sqlite_mod_spatialite: libspatialite.so.5
-      mail_sender:
-      mail_name:
-      smtp_host:
-      smtp_port:
-      smtp_security:
-      smtp_username:
-      smtp_password:
+      mail_sender: example@example.com
+      mail_name: Example sender name
+      smtp_host: smtp.gmail.com
+      smtp_port: 587
+      smtp_security: tls
+      smtp_username: example@googlemail.com
+      smtp_password: <password>
       backup_storage_period: 5
       poster_storage_period: 5
+      router.request_context.host: runalyze.com
+      router.request_context.scheme: https
+      router.request_context.base_url:
 
 Configuration variables
 -----------------------
@@ -145,3 +148,9 @@ backup\_storage\_period
     Default storage period for backups (in days)
 poster\_storage\_period
     Default storage period for poster (in days)
+router.request_context.host
+    Needed for correct urls in mails. Set your domain name here.
+router.request_context.scheme
+    Needed for correct urls in mails. Set to ``https`` or ``http``
+router.request_context.base_url
+    Needed for correct urls in mails. Set it to e.g. ``/runalyze`` if you are using subdirectories (you should not do that)
