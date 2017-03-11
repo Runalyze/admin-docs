@@ -16,7 +16,7 @@ All required php packages (Use the corresponding version php packages names):
 
 Further packages:
 
-``perl sqlite3 libsqlite3-mod-spatialite gettext libxml2 python3 python3-pip librsvg2-common inkscape``
+``perl sqlite3 libsqlite3-mod-spatialite gettext libxml2 python3 python3-pip librsvg2-bin librsvg2-common inkscape``
 
 Optional:
  * :ref:`Install and configure <time-zone-detection>` the timezone recognization database
