@@ -16,9 +16,10 @@ All required php packages (Use the corresponding version php packages names):
 
 Further packages:
 
-``perl sqlite3 libsqlite3-mod-spatialite gettext libxml2 python3 python3-pip librsvg2-bin librsvg2-common inkscape``
+``perl sqlite3 libsqlite3-mod-spatialite gettext libxml2 python3 python3-pip inkscape``
 
 Optional:
+ * Install/Compile rsvg(-convert) at least in version 2.41.0 (Default packages ``librsvg2-bin`` & ``librsvg2-common`` in Ubuntu are too old)
  * :ref:`Install and configure <time-zone-detection>` the timezone recognization database
  * :ref:`Download the elevation correction srtm data <elevation-srtm-files>`
 
