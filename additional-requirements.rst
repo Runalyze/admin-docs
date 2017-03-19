@@ -35,7 +35,7 @@ few seconds. A queueing system is used to process long lasting tasks (e.g.
 generating a complete backup or fancy posters from all your activities) in
 background.
 
-To process the queue, you need to create a cronjob  which always running a service for::
+To process the queue, you need to create a cronjob  which is always running a service for::
 
    php <pathToRunalyze>/bin/console runalyze:queue:consume --env=prod --no-debug (--max-runtime 120) (--max-messages 10) (--stop-when-empty)
    
