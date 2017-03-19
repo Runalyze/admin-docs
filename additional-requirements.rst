@@ -35,11 +35,11 @@ few seconds. A queueing system is used to process long lasting tasks (e.g.
 generating a complete backup or fancy posters from all your activities) in
 background.
 
-To process the queue, you need to create a cronjob always running service for::
+To process the queue, you need to create a cronjob  which always running a service for::
 
-   runalyze:queue:consume --env=prod --no-debug (--max-runtime 120) (--max-messages 10) (--stop-when-empty)
+   php <pathToRunalyze>/bin/console runalyze:queue:consume --env=prod --no-debug (--max-runtime 120) (--max-messages 10) (--stop-when-empty)
    
-Look at the :doc:`commands page <commands>` to see how to execute the service/command.
+Look at the :doc:`commands page <commands>` to see how to execute the service/command. 
 
 Parameters:
 
@@ -48,6 +48,8 @@ Parameters:
 * ``--stop-when-empty``  Stop consumer when queue is empty.
 
 If you are using a cronjob do always limit the runtime!
+
+Even better: Create a `systemd service <https://gist.github.com/mipapo/8ceef88ef49eec4cf905527dd0702f29>`_ for a always running worker.
 
 Mails
 -----
