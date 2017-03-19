@@ -38,6 +38,8 @@ background.
 To process the queue, you need to create a cronjob always running service for::
 
    runalyze:queue:consume --env=prod --no-debug (--max-runtime 120) (--max-messages 10) (--stop-when-empty)
+   
+Look at the :doc:`commands page <commands>` to see how to execute the service/command.
 
 Parameters:
 
