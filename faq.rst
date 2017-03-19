@@ -8,9 +8,9 @@ General
 
 When do you release new versions?
 **********************************
-We are deploying new release in the first place to our official hosted version at `RUNALYZE.com <https://runalyze.com>`_. 
+We are deploying new release in the first place to our official hosted version at `RUNALYZE.com <https://runalyze.com>`_.
 
-This allows us to identify problems before we release new versions for you all. Consider this as a quality assurance. 
+This allows us to identify problems before we release new versions for you all. Consider this as a quality assurance.
 
 Releasing a new version takes time and effort (updating the documentation, writing blog entries, distribute the releases on all our communication channels). Just relax and wait patiently for new releases.
 
@@ -19,11 +19,11 @@ Normally we are releasing a new version within a week after deploying it to our 
 Error messages
 **************
 
-Fatal error: Maximum execution time of 30 seconds exceeded in 
+Fatal error: Maximum execution time of 30 seconds exceeded in
 --------------------------------------------------------------
 Set the max_execution_time in your ``php.ini`` file higher than 30 seconds or add ``ini_set('max_execution_time', 300);`` to your index.php or update.php (where it happens).
 
-If you are trying to update RUNALYZE, try to run the respective update file (you will find the sql-file in ``inc/install``) manually. 
+If you are trying to update RUNALYZE, try to run the respective update file (you will find the sql-file in ``inc/install``) manually.
 
 „out of memory“ or „Maximum execution“
 --------------------------------------
@@ -79,7 +79,7 @@ The constraint ``(activityid) REFERENCES runalyze_training (id)`` fails while tr
 You can find the faulty row with::
 
     SELECT runalyze_trackdata.*, runalyze_training.id FROM runalyze_trackdata LEFT JOIN runalyze_training ON runalyze_trackdata.activityid = runalyze_training.id WHERE ISNULL(id)
-    
+
 Remember the shown ``activityid``, delete this row from ``runalyze_trackdata`` by hand and try the respective line from the database update again.
 
 Common problems
@@ -90,7 +90,7 @@ Common problems
 RUNALYZE does not show up completely (MySQL Only Full Group by problem)
 ------------------------------------------------------------------------
 
-Some queries are not `ONLY_FULL_GROUP_BY` compatible. If you are using MySQL 5.7 the sql mode `ONLY_FULL_GROUP_BY` is enabled by default. You have to `disable this mode <http://stackoverflow.com/questions/23921117/disable-only-full-group-by/36033983#36033983>`_. 
+Some queries are not `ONLY_FULL_GROUP_BY` compatible. If you are using MySQL 5.7 the sql mode `ONLY_FULL_GROUP_BY` is enabled by default. You have to `disable this mode <http://stackoverflow.com/questions/23921117/disable-only-full-group-by/36033983#36033983>`_.
 
 .. note::
     There's an `open issue <https://github.com/Runalyze/Runalyze/issues/1790>`_ to make all queries `ONLY_FULL_GROUP_BY` compatible.
@@ -112,8 +112,10 @@ My RUNALYZE version is only in english
 
 Maybe you are missing the gettext PHP package. Please install the package ``php-gettext``. Don't forget to restart your webserver!
 
-Cannot activate my account (no activation mail)
-------------------------------------------------
-Usually the account should be activated automatically when you host your RUNALYZE installaton locally. If this fails you have to remove the hash from the ``activation_hash`` colum of the user of the ``_account`` table in the database. 
+Activate an account manually
+------------------------------
+In case you need to activate your account manually you have to remove the hash from the ``activation_hash`` column of the user of the ``_account`` table in the database.
 
-
+Poster tool does not show up
+------------------------------
+You need to fulfill the :ref:`additional requirements <queueing-system>`. Even then the poster tool may not show up in the tool list. Some PHP defaults does not allow to check the directories for the converter and python. Adjust your php settings or copy the template and remove the if-condition of ` https://github.com/Runalyze/Runalyze/blob/master/app/Resources/views/tools/tools_list.html.twig#L76`_
