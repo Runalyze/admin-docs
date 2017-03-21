@@ -6,7 +6,7 @@ Configuration
 
 RUNALYZE needs at least database parameters to work. Copying a default
 ``app/config/default_config.yml`` to ``data/config.yml`` is part of the
-:doc:`Installation process <installation/3.x>`.
+:doc:`Installation process <installation/4.x>`.
 
 All parameters are optional. If they are not in your custom ``data/config.yml``
 default values from ``app/config/default_config.yml`` will be used. Still, we
@@ -41,6 +41,7 @@ Examplary configuration
       darksky_api_key:
       nokia_here_appid:
       nokia_here_token:
+      thunderforest_api_key:
       geonames_username:
       perl_path: /usr/bin/perl
       python3_path: /usr/bin/python3
@@ -109,6 +110,8 @@ nokia\_here\_appid
     HERE maps
 nokia\_here\_token
     Token for HERE access
+thunderforest\_api\_key
+    Api key for thunderforest layers (for activity maps), see `thunderforest.com <https://www.thunderforest.com/docs/apikeys/>`_
 geonames\_username
     Username for `geonames.org <http://www.geonames.org/>`_, used for elevation
     correction if no local srtm files are available
