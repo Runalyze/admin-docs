@@ -13,7 +13,9 @@ General instructions
   will always work. Therefore you should follow the update process for each
   minor version.
 * Execute the update via cli if you have big installations or a slow server.
-* Clear the cache by deleting the content of the directories ``var/cache/prod`` and ``var/cache/doctrine`` or by executing the command ``cache:clean``
+* Clear the cache by deleting the content of the directories ``var/cache/prod``
+  and ``var/cache/doctrine`` or by executing the command ``cache:clean`` and
+  ``doctrine:cache:clear-metadata``.
 
 .. warning:: Never forget to make a backup before updating or changing your
     RUNALYZE installation. (You break it - you fix it)

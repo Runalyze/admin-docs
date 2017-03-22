@@ -21,7 +21,11 @@ Clear cache
 
    cache:clear --env=prod
 
-Clears the production environment cache
+Clears the production environment cache, he same is possible for the dev
+environment with ``--env=dev``. This command clears the general cache for e.g.
+the app kernel, the DI container, annotations and twig templates. For clearing
+doctrine's cache (if you changed some entities), you need to run
+``doctrine:cache:clear-metadata`` or clear ``var/cache/doctrine/`` manually.
 
 Install RUNALYZE
 ^^^^^^^^^^^^^^^^^^
