@@ -57,6 +57,16 @@ Cleanup Registrations
 
 Remove all not activated users older than x (default 7) days.
 
+Clear Notifications
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: php
+
+   runalyze:notification:clear
+
+Removes all expired notifications from database
+
+
 Activities
 ------------
 
@@ -69,3 +79,25 @@ Bulk import
 
 Imports all activity files within a folder. Will check for duplicates.
 
+Notifications
+--------------
+Creates notifications for either all user or specific users (language or ids).
+Template must exists in `data/views/notifications` and has to be a yaml file:
+
+.. code-block:: php
+
+    text: "We've updated RUNALYZE. Have a look at what's new."
+    link: http://blog.runalyze.com/
+
+.. code-block:: php
+
+   runalyze:notification:create <TemplateName>
+
+Optional parameters (examples):
+
+.. code-block:: php
+
+    --lang=de                           # add notification to all users where the actual set language is "de" (german)
+    --exclude-lang=de                   # add notification to all users where the actual set language is not "de"
+    --account=1                         # add notification to user with id 1 (add multiple ids by adding a further parameters: --account=1 --account=2 )
+    --lifetime <integer>                # notification lifetime in days
