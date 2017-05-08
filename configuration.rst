@@ -42,6 +42,7 @@ Examplary configuration
       nokia_here_appid:
       nokia_here_token:
       thunderforest_api_key:
+      mapbox_api_key:
       geonames_username:
       perl_path: /usr/bin/perl
       python3_path: /usr/bin/python3
@@ -112,6 +113,8 @@ nokia\_here\_token
     Token for HERE access
 thunderforest\_api\_key
     Api key for thunderforest layers (for activity maps), see `thunderforest.com <https://www.thunderforest.com/docs/apikeys/>`_
+mapbox\_api\_key
+    Api key for mapbox outdoor layer (for activity maps), see `mapbox.com <https://www.mapbox.com/help/create-api-access-token/>`_
 geonames\_username
     Username for `geonames.org <http://www.geonames.org/>`_, used for elevation
     correction if no local srtm files are available

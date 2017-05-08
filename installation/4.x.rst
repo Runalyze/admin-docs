@@ -2,6 +2,14 @@
 Installation instructions for v4.x
 ==================================
 
+.. note::
+   RUNALYZE started as one-man-project with only one user and has grown to an
+   app with around 13.000 users of our `official online version <https://runalyze.com/>`_.
+   Server requirements and complexity of the app and its configuration grow with
+   the feature list. Please understand that our main focus is on implementing
+   new features and serving a performant online version. Therefore, support for
+   local installations is limited.
+
 You can simply follow the :doc:`installation instructions for 3.x </installation/3.x>`.
 
 For differences to v3.x, see :doc:`update instructions for 4.0 </upgrade/4.x>`

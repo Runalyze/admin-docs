@@ -114,8 +114,12 @@ Maybe you are missing the gettext PHP package. Please install the package ``php-
 
 Activate an account manually
 ------------------------------
-In case you need to activate your account manually you have to remove the hash from the ``activation_hash`` column of the user of the ``_account`` table in the database.
+In case you need to activate your account manually you have to set the ``activation_hash`` column of the user of the ``_account`` table to "null" in the database.
 
 Poster tool does not show up
 ------------------------------
 You need to fulfill the :ref:`additional requirements <queueing-system>`. Even then the poster tool may not show up in the tool list. Some PHP defaults does not allow to check the directories for the converter and python. Adjust your php settings or copy the template and remove the if-condition of ` https://github.com/Runalyze/Runalyze/blob/master/app/Resources/views/tools/tools_list.html.twig#L76`_
+
+FIT Importer is not working
+----------------------------
+Perl must be installed on your system and you have to set the corresponding path in the RUNALYZE configuration file.
