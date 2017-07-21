@@ -134,6 +134,8 @@ Adjust the PHP-FPM config to your needs::
     server {
         server_name domain.tld www.domain.tld;
         root /var/www/project/web;
+        
+        client_max_body_size       30m;
 
         location / {
             # try to serve file directly, fallback to app.php
