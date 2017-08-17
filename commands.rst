@@ -100,4 +100,9 @@ Optional parameters (examples):
     --lang=de                           # add notification to all users where the actual set language is "de" (german)
     --exclude-lang=de                   # add notification to all users where the actual set language is not "de"
     --account=1                         # add notification to user with id 1 (add multiple ids by adding a further parameters: --account=1 --account=2 )
+    --registration-before <timestamp>   # add notificatoin to all users who registered before <timestamp>
+    --registration-after <timestamp>    # add notificatoin to all users who registered after <timestamp>
+    --last-action-before <timestamp>    # add notificatoin to all users who where active before <timestamp>
+    --last-action-after <timestamp>     # add notificatoin to all users who where active after <timestamp>
     --lifetime <integer>                # notification lifetime in days
+    --fore                              # do not ask to create notification(s)
