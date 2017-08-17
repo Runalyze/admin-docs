@@ -5,8 +5,8 @@ These docs are for admins hosting an installation of `RUNALYZE <https://runalyze
 If you're looking for the user docs visit our `Help <https://help.runalyze.com/>`_.
 
 .. note::
-   RUNALYZE started as one-man-project with only one user and has grown to an 
-   app with around 10.000 users of our `official online version <https://runalyze.com/>`_.
+   RUNALYZE started as one-man-project with only one user and has grown to an
+   app with around 15.000 users of our `official online version <https://runalyze.com/>`_.
    Server requirements and complexity of the app and its configuration grow with
    the feature list. Please understand that our main focus is on implementing
    new features and serving a performant online version. Therefore, support for
