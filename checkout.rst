@@ -46,7 +46,7 @@ You may need to install ``gulp-cli`` globally: ``npm install -g gulpjs/gulp-cli`
 
 Installation of RUNALYZE
 ------------------------
-Now you can continue with the default installation of RUNALYZE, see :doc:`installation/4.x`.
+You can now continue with the default installation of RUNALYZE, see :doc:`installation/4.x`.
 
 Stay up to date
 ---------------

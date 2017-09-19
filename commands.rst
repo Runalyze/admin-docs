@@ -21,7 +21,7 @@ Clear cache
 
    cache:clear --env=prod
 
-Clears the production environment cache, he same is possible for the dev
+Clears the production environment cache, the same is possible for the dev
 environment with ``--env=dev``. This command clears the general cache for e.g.
 the app kernel, the DI container, annotations and twig templates. For clearing
 doctrine's cache (if you changed some entities), you need to run
@@ -81,17 +81,19 @@ Imports all activity files within a folder. Will check for duplicates.
 
 Notifications
 --------------
-Creates notifications for either all user or specific users (language or ids).
-Template must exists in `data/views/notifications` and has to be a yaml file:
+Creates notifications for either all user or specific users (by language or id).
+Template must exists in ``data/views/notifications`` and has to be a yaml file.
+
+.. code-block:: php
+
+   runalyze:notification:create <TemplateName>
+
+Example notification (e.g. ``update.yaml``):
 
 .. code-block:: php
 
     text: "We've updated RUNALYZE. Have a look at what's new."
     link: http://blog.runalyze.com/
-
-.. code-block:: php
-
-   runalyze:notification:create <TemplateName>
 
 Optional parameters (examples):
 
@@ -105,4 +107,4 @@ Optional parameters (examples):
     --last-action-before <timestamp>    # add notificatoin to all users who where active before <timestamp>
     --last-action-after <timestamp>     # add notificatoin to all users who where active after <timestamp>
     --lifetime <integer>                # notification lifetime in days
-    --fore                              # do not ask to create notification(s)
+    --force                             # do not ask to create notification(s)

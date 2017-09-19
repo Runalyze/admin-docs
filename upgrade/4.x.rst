@@ -37,7 +37,7 @@ Just follow the standard instructions:
 
 2. Run the update via cli (``php bin/console doctrine:migrations:migrate``) or
    accessing ``/update`` (``update_disabled: no`` is required in your
-   ``data/config.yml``). We recommend to run the update via cli due some long
+   ``data/config.yml``). We recommend to run the update via cli due to some long
    running database updates.
 
 
@@ -50,10 +50,10 @@ Just follow the standard instructions:
 
 2. Run the update via cli (``php bin/console doctrine:migrations:migrate``) or
    accessing ``/update`` (``update_disabled: no`` is required in your
-   ``data/config.yml``). We recommend to run the update via cli due some long
+   ``data/config.yml``). We recommend to run the update via cli due to some long
    running database updates.
 
-3. Adjust the new :doc:`configuration </configuration>`. parameters. ``thunderforest_api_key`` and ``mapbox_api_key``
+3. Adjust the new :doc:`configuration </configuration>` parameters. ``thunderforest_api_key`` and ``mapbox_api_key``
 
 
 Upgrade from 3.2 to 4.0
@@ -65,10 +65,10 @@ Just follow the standard instructions:
 
 2. Run the update via cli (``php bin/console doctrine:migrations:migrate``) or
    accessing ``/update`` (``update_disabled: no`` is required in your
-   ``data/config.yml``). We recommend to run the update via cli due some long
+   ``data/config.yml``). We recommend to run the update via cli due to some long
    running database updates.
 
-3. Adjust the new :doc:`configuration </configuration>`. parameters. ``backup_storage_period``, ``poster_storage_period``, ``router.request_context.host``, ``router.request_context.scheme``, ``router.request_context.base_url``
+3. Adjust the new :doc:`configuration </configuration>` parameters. ``backup_storage_period``, ``poster_storage_period``, ``router.request_context.host``, ``router.request_context.scheme``, ``router.request_context.base_url``
 
 From v4.0 on, RUNALYZE uses a queueing system for processing long lasting tasks
 in background. See :ref:`additional requirements <queueing-system>`

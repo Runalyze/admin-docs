@@ -35,7 +35,7 @@ few seconds. A queueing system is used to process long lasting tasks (e.g.
 generating a complete backup or fancy posters from all your activities) in
 background.
 
-To process the queue, you need to create a cronjob  which is always running a service for::
+To process the queue, you need to create a cronjob for::
 
    php <pathToRunalyze>/bin/console runalyze:queue:consume --env=prod --no-debug (--max-runtime 120) (--max-messages 10) (--stop-when-empty)
    
@@ -47,17 +47,17 @@ Parameters:
 * ``--max-messages <messages>``  Maximum number of messages that should be consumed.
 * ``--stop-when-empty``  Stop consumer when queue is empty.
 
-If you are using a cronjob do always limit the runtime!
+Always set a maximal runtime, if you use a cronjob.
 
-Even better: Create a `systemd service <https://gist.github.com/mipapo/8ceef88ef49eec4cf905527dd0702f29>`_ for a always running worker.
+Even better: Create a `systemd service <https://gist.github.com/mipapo/8ceef88ef49eec4cf905527dd0702f29>`_ for an always running worker.
 
 Mails
 -----
 
 Mails are used for several processes, mainly all account related changes (e.g.
-registration, chaning password, deletion). The mail server needs to be
+registration, changing password, account deletion). The mail server needs to be
 configured in your ``data/config.yml`` (see
-:doc:`Configuration <configuration>`).
+:doc:`configuration <configuration>`).
 
 
 .. _non-php-languages:
@@ -67,7 +67,7 @@ Paths to non-php languages
 
 Not all tools that we use are written in php, but the following languages are in
 general available on common unix systems. You only need to adjust paths in your
-``data/config.yml`` (see :doc:`Configuration <configuration>`) in case of
+``data/config.yml`` (see :doc:`configuration <configuration>`) in case of
 problems.
 
 Perl
@@ -83,7 +83,7 @@ Python
 Non-php tools
 -------------
 
-Several non-php tools need to be installed locally.
+Several non-php tools need to be installed locally for optional features.
 
 ttbincnv
     Reading ttbin files from TomTom requires an additional tool. A compiled
@@ -107,21 +107,21 @@ satellite data to correct elevation data of your activities. There exist free
 APIs but it's much faster to use local files.
 
 Respective data can be downloaded via `dwtkns <http://dwtkns.com/srtm/>`_. You
-need to place all relevent \*.tif files for your region into ``data/srtm``.
+need to place all relevant \*.tif files for your region into ``data/srtm``.
 
 
 API Keys
 --------
 
 We use several APIs for different purposes. API keys and tokens have to be set
-in your ``data/config.yml`` (see :doc:`Configuration <configuration>`).
+in your ``data/config.yml`` (see :doc:`configuration <configuration>`).
 
 Weather data
     Loading weather data automatically is possible via
     `openweathermap.org <http://openweathermap.org/api>`_ (free plan offers
     recent data only) and `darksky.net <http://darksky.net/dev>`_.
 Map layer
-    Additional map layery by Nokia HERE require an API key, see
+    Additional map layer by Nokia HERE require an API key, see
     `developer.here.com <https://developer.here.com/>`_
 Elevation data
     Elevation data can be retrieved via several services. Local srtm files are
