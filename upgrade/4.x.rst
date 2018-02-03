@@ -30,6 +30,9 @@ General instructions
 
 Upgrade from 4.2 to 4.3
 ***********************
+
+.. warning:: Latest chance to use the export/import tool to migrate to runalyze.com. `Read the blog post <https://blog.runalyze.com/allgemein-en/announcement-no-more-support-for-import-export-tool/>`_
+
 Just follow the standard instructions:
 
 1. Purge your runalyze/ directory except for the ``data/`` directory and extract
