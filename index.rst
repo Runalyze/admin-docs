@@ -1,26 +1,23 @@
 RUNALYZE docs for admins
 ========================
 
-These docs are for admins hosting an installation of `RUNALYZE <https://runalyze.com>`_.
 If you're looking for the user docs visit our `Help <https://help.runalyze.com/>`_.
+
+.. warning::
+   `Changes concerning the OpenSource alignment of RUNALYZE <https://blog.runalyze.com/allgemein-en/changes-opensource-alignment/>`_
 
 .. note::
    RUNALYZE started as one-man-project with only one user and has grown to an
-   app with around 17.000 users of our `official online version <https://runalyze.com/>`_.
+   app with around 18.000 users of our `official online version <https://runalyze.com/>`_.
    Server requirements and complexity of the app and its configuration grow with
-   the feature list. Please understand that our main focus is on implementing
-   new features and serving a performant online version. Therefore, support for
-   local installations is limited.
+   the feature list. Version 4.3 is the latest version for self hosted versions.
 
-Missing something in these docs? Contribute at `Github <https://github.com/Runalyze/admin-docs>`_
-or `open an issue about what's missing <https://github.com/Runalyze/admin-docs/issues/new>`_.
 
 .. toctree::
    :maxdepth: 2
    :caption: General
 
    faq
-   support
 
 .. _install:
 
@@ -44,9 +41,3 @@ or `open an issue about what's missing <https://github.com/Runalyze/admin-docs/i
    templates
    commands
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Development
-
-   checkout
-   contribute
